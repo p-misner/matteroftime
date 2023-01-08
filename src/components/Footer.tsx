@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <FullWidth>
       <Wrapper>
-        <p> Created by Priya Misner</p>
+        <p> Created by Priya Misner (Staging)</p>
       </Wrapper>
     </FullWidth>
   );
