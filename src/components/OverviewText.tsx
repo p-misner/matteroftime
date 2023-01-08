@@ -28,8 +28,15 @@ export default function OverviewText() {
     second: "numeric",
   });
 
-  const DayofWeek = time.toLocaleDateString("en-US", { weekday: "long" });
+  const dayofWeek = time.toLocaleDateString("en-US", { weekday: "long" });
 
+  const formattedDate = time.toLocaleDateString("en-US", {
+    month: "numeric",
+    day: "numeric",
+    year: "numeric",
+  });
+
+  // const dateFormatted = time.toLocaleDateString("en-US", { year: "long" });
   useEffect(() => {
     const timer = setInterval(() => setTime(new Date()), 1000);
     return function cleanup() {
@@ -40,10 +47,11 @@ export default function OverviewText() {
   return (
     <HeroTextWrapper>
       <BaseText>
-        In your location, todays date is <BoldedText text="01/03/2023" />. In
-        the <BoldedText text={timeZoneLong || "none detected"} /> zone, it is
-        currently <BoldedText text={timeToSecond} /> on a {DayofWeek}. It is the{" "}
-        <BoldedText text="first" /> day of the week and a{" "}
+        In your location, today&apos;s date is{" "}
+        <BoldedText text={formattedDate} />. In the{" "}
+        <BoldedText text={timeZoneLong || "none detected"} /> zone, it is
+        currently <BoldedText text={timeToSecond} /> on a {dayofWeek}. It&apos;s
+        the <BoldedText text="first" /> day of the week and a{" "}
         <BoldedText text="weekday" />.
       </BaseText>
     </HeroTextWrapper>

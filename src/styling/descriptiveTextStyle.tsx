@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { heroText, maxWidth } from "./stylingConstants";
 
-export const BaseText = styled.p`
+export const BaseText = styled.div`
   font-family: "Roboto Mono";
   font-size: ${heroText};
   font-weight: 400;
