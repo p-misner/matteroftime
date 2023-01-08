@@ -12,5 +12,5 @@ export const BaseText = styled.p`
 
 export const HeroTextWrapper = styled.div`
   max-width: ${maxWidth};
-  margin: 0 auto;
+  margin: 64px auto;
 `;
