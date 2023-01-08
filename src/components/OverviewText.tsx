@@ -1,12 +1,18 @@
 import React from "react";
+
 import { BaseText, HeroTextWrapper } from "../styling/descriptiveTextStyle";
+import TextTooltip from "./Tooltips";
 
 function CountryDropdown() {}
 
-function Tooltip() {}
+function TooltipText() {}
 
 function BoldedText({ text }: { text: string }) {
-  return <span style={{ fontWeight: 700 }}> {text}</span>;
+  return (
+    <TextTooltip delay={100} text={text}>
+      <span style={{ fontWeight: 700 }}> {text}</span>
+    </TextTooltip>
+  );
 }
 
 export default function OverviewText() {
