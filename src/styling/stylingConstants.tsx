@@ -2,6 +2,7 @@
 import React from "react";
 
 export const tabletBreakpoint = "768px";
+export const mobileBreakpoint = "480px";
 export const maxWidth = "1170px";
 export const h2 = "24px";
 export const heroText = "32px";

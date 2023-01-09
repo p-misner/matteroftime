@@ -5,7 +5,6 @@ import OverviewText from "./components/OverviewText";
 import PagePreview from "./components/PagePreview";
 
 function App() {
-  const hello = 5;
   return (
     <div className="App">
       <Header />
