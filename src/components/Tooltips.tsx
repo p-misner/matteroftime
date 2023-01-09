@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
+import { vizColors } from "../styling/stylingConstants";
 // reference: https://paladini.dev/posts/how-to-make-an-extremely-reusable-tooltip-component-with-react--and-nothing-else/
-const textColor = "black";
-const background = "white";
-const arrowsize = "6px";
 
 const TooltipWrapper = styled.div`
   display: inline-block;
@@ -27,7 +24,7 @@ const TooltipTip = styled.div`
   }
 `;
 const ColorDiv = styled.div`
-  background: #4badf8;
+  background: ${vizColors.adamantineBlue};
   font-family: Outfit;
   font-size: 24px;
   font-weight: 500;
