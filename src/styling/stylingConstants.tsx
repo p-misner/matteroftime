@@ -16,7 +16,14 @@ export const fontColor = "#000";
 // export const pink = "#FA80D8";
 // export const neonSeaFoam = "#1ADB9A";
 
-export const vizColors = {
+export const vizColors: {
+  yellow: string;
+  brightGreen: string;
+  adamantineBlue: string;
+  pastelPurple: string;
+  pink: string;
+  neonSeaFoam: string;
+} = {
   yellow: "#F9D147",
   brightGreen: "#9BE400",
   adamantineBlue: "#4BADF8",
