@@ -37,7 +37,7 @@ const ColorDiv = styled.div`
 type TextTooltipType = {
   text: string;
   delay: number;
-  children: JSX.Element | JSX.Element[];
+  children: any | any[];
 };
 export default function TextTooltip({
   text,

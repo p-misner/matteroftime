@@ -4,20 +4,13 @@
     "es2021": true
   },
   "extends": [
-    "airbnb",
-    "airbnb-typescript",
-    "airbnb/hooks",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier"
+    "eslint:recommended", "next"
   ],
   "overrides": [],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error",
     "no-unused-vars": "warn",
     "@typescript-eslint/no-unused-vars": "off"
   }

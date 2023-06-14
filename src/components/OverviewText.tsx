@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react";
 import { BaseText, HeroTextWrapper } from "../styling/descriptiveTextStyle";
 import TextTooltip from "./Tooltips";
 
-function CountryDropdown() {}
-
 function BoldedText({ text }: { text: string }) {
   return (
     <TextTooltip delay={100} text={text}>
