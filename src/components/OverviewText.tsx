@@ -48,7 +48,7 @@ export default function OverviewText() {
         In your location, today&apos;s date is{" "}
         <BoldedText text={formattedDate} />. In the{" "}
         <BoldedText text={timeZoneLong || "none detected"} /> zone, it is
-        currently <BoldedText text={timeToSecond} /> on a {dayofWeek}. It&apos;s
+        {/* currently <BoldedText text={timeToSecond} /> on a {dayofWeek}. It&apos;s */}
         the <BoldedText text="first" /> day of the week and a{" "}
         <BoldedText text="weekday" />.
       </BaseText>
