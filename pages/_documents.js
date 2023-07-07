@@ -1,6 +1,7 @@
 import Document from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
+// ref if things go wrong with font loading: https://github.com/agriffis/agcom/blob/4783dcb9eeae67de8765a551f4336e7068eed335/pages/_document.tsx
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
@@ -28,21 +29,3 @@ export default class MyDocument extends Document {
     }
   }
 }
-// export default class MyDocument extends Document {
-//   render() {
-//     return (
-//       <Html lang="en">
-//         <Head>
-//           <link
-//             href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-//             rel="stylesheet"
-//           />
-//         </Head>
-//         <body>
-//           <Main />
-//           <NextScript />
-//         </body>
-//       </Html>
-//     );
-//   }
-// double check this bit, not all brackets are closed/paired

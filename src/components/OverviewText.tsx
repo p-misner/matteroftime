@@ -13,6 +13,13 @@ function BoldedText({ text }: { text: string }) {
 
 export default function OverviewText() {
   const [time, setTime] = useState<Date>(new Date());
+  useEffect(() => {
+    const timer = setInterval(() => setTime(new Date()), 1001);
+    return function cleanup() {
+      clearInterval(timer);
+    };
+  });
+
   const timeZoneLong = time
     .toLocaleDateString("en-US", {
       day: "2-digit",
@@ -35,12 +42,6 @@ export default function OverviewText() {
   });
 
   // const dateFormatted = time.toLocaleDateString("en-US", { year: "long" });
-  useEffect(() => {
-    const timer = setInterval(() => setTime(new Date()), 1000);
-    return function cleanup() {
-      clearInterval(timer);
-    };
-  });
 
   return (
     <HeroTextWrapper>
@@ -48,7 +49,7 @@ export default function OverviewText() {
         In your location, today&apos;s date is{" "}
         <BoldedText text={formattedDate} />. In the{" "}
         <BoldedText text={timeZoneLong || "none detected"} /> zone, it is
-        {/* currently <BoldedText text={timeToSecond} /> on a {dayofWeek}. It&apos;s */}
+        currently <BoldedText text={timeToSecond} /> on a{dayofWeek}. It&apos;s
         the <BoldedText text="first" /> day of the week and a{" "}
         <BoldedText text="weekday" />.
       </BaseText>
