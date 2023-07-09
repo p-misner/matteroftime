@@ -1,5 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-import React from "react";
 import styled from "styled-components";
 
 import { h2, fontColor, maxWidth } from "./stylingConstants";

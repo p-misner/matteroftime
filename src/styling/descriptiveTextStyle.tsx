@@ -13,3 +13,8 @@ export const HeroTextWrapper = styled.div`
   max-width: ${maxWidth};
   margin: 64px auto;
 `;
+
+export const NoteText = styled.p`
+  color: gray;
+  line-height: 130%;
+`;
