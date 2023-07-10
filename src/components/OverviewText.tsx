@@ -37,6 +37,101 @@ function LuxonTime() {
   }, []);
   return time;
 }
+function defaultDateFormatter(order: string) {
+  const firstThree = order.slice(0, 3);
+  switch (firstThree) {
+    case "DMY":
+      return "dd-LL-yyyy*";
+    case "MDY":
+      return "LL-dd-yyyy*";
+    case "YMD":
+      return "yyyy-LL-dd*";
+    default:
+      return "!non!";
+  }
+}
+function isWeekend({
+  dayofWeek,
+  WorkWeek,
+}: {
+  dayofWeek: string;
+  WorkWeek: string;
+}) {
+  switch (WorkWeek) {
+    case "MtoF":
+      if (dayofWeek === "Sunday" || dayofWeek === "Saturday") return true;
+      else return false;
+    case "SutoTh":
+      if (dayofWeek === "Friday" || dayofWeek === "Saturday") return true;
+      else return false;
+    case "SutoF":
+      if (dayofWeek === "Saturday") return true;
+      else return false;
+    case "SatoTh":
+      if (dayofWeek === "Friday") return true;
+      else return false;
+    case "MtoSa":
+      if (dayofWeek === "Sunday") return true;
+      else return false;
+    default:
+      return false;
+  }
+}
+function dayNumberofWeek({
+  firstDay,
+  dayofWeek,
+}: {
+  firstDay: string;
+  dayofWeek: string;
+}) {
+  const orderWords = [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth",
+    "seventh",
+  ];
+  let weekOrder: string[] = [];
+  switch (firstDay) {
+    case "Monday":
+      weekOrder = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ];
+      return orderWords[weekOrder.indexOf(dayofWeek)];
+    case "Sunday":
+      weekOrder = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      return orderWords[weekOrder.indexOf(dayofWeek)];
+    case "Saturday":
+      weekOrder = [
+        "Saturday",
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+      ];
+      return orderWords[weekOrder.indexOf(dayofWeek)];
+    default:
+      return "error";
+  }
+}
 export default function OverviewText() {
   const [timeZone, setTimezone] = useState<string>(
     Intl.DateTimeFormat().resolvedOptions().timeZone
@@ -60,6 +155,7 @@ export default function OverviewText() {
     })
     .slice(4);
 
+  // maybe move this into separate funciton vs ternary
   const timeToSecond = time.toLocaleString(
     countryDateDetails.ClockTypeHour == "12hr"
       ? {
@@ -77,24 +173,24 @@ export default function OverviewText() {
 
   const dayofWeek = time.toLocaleString({ weekday: "long" });
 
-  function defaultDateFormatter(order: string) {
-    const firstThree = order.slice(0, 3);
-    switch (firstThree) {
-      case "DMY":
-        return "dd-LL-yyyy*";
-      case "MDY":
-        return "LL-dd-yyyy*";
-      case "YMD":
-        return "yyyy-LL-dd*";
-      default:
-        return "!non!";
-    }
-  }
+  // maybe move this into separate funciton vs ternary
   const formattedDate = time.toFormat(
     countryDateDetails.DateFormatDefault == "None Specified"
       ? defaultDateFormatter(countryDateDetails.DateFormat)
       : countryDateDetails.DateFormatDefault
   );
+
+  const typeOfDay = isWeekend({
+    dayofWeek: dayofWeek,
+    WorkWeek: countryDateDetails.WorkWeek,
+  })
+    ? "weekend"
+    : "weekday";
+
+  const dayNumber = dayNumberofWeek({
+    dayofWeek: dayofWeek,
+    firstDay: countryDateDetails.FirstDayofWeek,
+  });
 
   return (
     <HeroTextWrapper>
@@ -123,8 +219,8 @@ export default function OverviewText() {
         , today&apos;s date is <BoldedText text={formattedDate} />. Part of the{" "}
         <BoldedText text={timeZoneLong || "none detected"} /> zone, it is
         currently <BoldedText text={timeToSecond} /> on a {dayofWeek}. It&apos;s
-        the <BoldedText text="first" /> day of the week and a{" "}
-        <BoldedText text="weekday" />.
+        the <BoldedText text={dayNumber} /> day of the week and a{" "}
+        <BoldedText text={typeOfDay} />.
       </BaseText>
 
       <NoteText>
