@@ -1,7 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 import styled from "styled-components";
 
-import { h2, fontColor, maxWidth } from "./stylingConstants";
+import { fontSize, fontColor, maxWidth } from "./stylingConstants";
+import Link from "next/link";
 
 export const FullWidth = styled.div`
   border-bottom: 2px solid ${fontColor};
@@ -16,10 +17,22 @@ export const Wrapper = styled.div`
   margin: 12px auto;
 `;
 
-export const HeaderH2 = styled.h2`
-  font-size: ${h2};
+export const HeaderH3 = styled.h2`
+  font-size: ${fontSize.large};
   font-family: Outfit;
   color: ${fontColor};
+`;
+
+export const UnStyledLink = styled(Link)`
+  text-decoration: none;
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+    color: inherit;¬
+  }
 `;
 
 export const AboutBox = styled.div`
@@ -38,6 +51,6 @@ export const AboutBox = styled.div`
 `;
 
 export const Question = styled.p`
-  font-size: ${h2};
+  font-size: ${fontSize.large};
   font-family: Outfit;
 `;

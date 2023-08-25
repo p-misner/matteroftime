@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
+
 import {
   fontColor,
   vizColors,
   mobileBreakpoint,
   maxWidth,
 } from "../styling/stylingConstants";
+import { UnStyledLink } from "../styling/headerStyle";
 
 const PageCardWrapper = styled.div`
   border-bottom: 2px solid ${fontColor};
@@ -102,7 +105,9 @@ function PageCard({
 }) {
   return (
     <PageCardWrapper>
-      <h3>{title}</h3>
+      <UnStyledLink href="/dateformat">
+        <h3>{title} →</h3>
+      </UnStyledLink>
       <p>{bodyCopy}</p>
       <ColorImage size="big" color={color} />
     </PageCardWrapper>

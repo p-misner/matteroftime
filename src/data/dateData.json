@@ -1802,9 +1802,9 @@
   {
     "FullName": "South Korea",
     "CountryCode": "KR",
-    "DateFormat": "",
-    "Punctuation": "None Specified",
-    "DateFormatDefault": "None Specified",
+    "DateFormat": "YMD",
+    "Punctuation": "symbol",
+    "DateFormatDefault": "yy년 LL월 dd일",
     "DateFormatShort": "",
     "DateFormatLong": "",
     "WorkWeek": "MtoF",
@@ -2130,7 +2130,7 @@
     "DaylightSavings": ""
   },
   {
-    "FullName": "North Macedonia",
+    "FullName": "Macedonia",
     "CountryCode": "MK",
     "DateFormat": "DMY",
     "Punctuation": "None Specified",
@@ -3390,7 +3390,7 @@
     "DaylightSavings": ""
   },
   {
-    "FullName": "Taiwan",
+    "FullName": "Taiwan, Province of China",
     "CountryCode": "TW",
     "DateFormat": "YMD",
     "Punctuation": "/",

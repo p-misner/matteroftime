@@ -4,7 +4,7 @@ import React from "react";
 export const tabletBreakpoint = "768px";
 export const mobileBreakpoint = "480px";
 export const maxWidth = "1170px";
-export const h2 = "24px";
+// export const h2 = "24px";
 export const heroText = "32px";
 
 /* Colors */
@@ -15,6 +15,18 @@ export const fontColor = "#000";
 // export const pastelPurple = "#9980FA";
 // export const pink = "#FA80D8";
 // export const neonSeaFoam = "#1ADB9A";
+
+/* Font */
+export const fontSize = {
+  small: "14px",
+  regular: "18px",
+  large: "24px",
+  xlarge: "32px",
+};
+
+export const fontWeight = {
+  semibold: 600,
+};
 
 export const vizColors: {
   yellow: string;

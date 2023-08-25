@@ -1,10 +1,10 @@
 /* eslint-disable import/prefer-default-export */
 import styled from "styled-components";
-import { heroText, maxWidth } from "./stylingConstants";
+import { fontSize, maxWidth } from "./stylingConstants";
 
 export const BaseText = styled.div`
   font-family: "Roboto Mono";
-  font-size: ${heroText};
+  font-size: ${fontSize.xlarge};
   font-weight: 400;
   line-height: 80px;
 `;

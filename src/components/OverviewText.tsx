@@ -26,6 +26,7 @@ function BoldedText({ text }: { text: string }) {
 // from dropdown, allow change of region selection.
 // do dumb dropdown, come back to redesign later
 // then, based on region selected, update how date, day of week and weekend looks.
+//final step: change note to show alternate timezones within country
 
 function LuxonTime() {
   const [time, setTime] = useState<DateTime>(DateTime.now());
@@ -132,6 +133,7 @@ function dayNumberofWeek({
       return "error";
   }
 }
+
 export default function OverviewText() {
   const [timeZone, setTimezone] = useState<string>(
     Intl.DateTimeFormat().resolvedOptions().timeZone
@@ -192,6 +194,9 @@ export default function OverviewText() {
     firstDay: countryDateDetails.FirstDayofWeek,
   });
 
+  const allTimeZones = getTimezonesForCountry(countryCode)?.map((x) => x.name);
+  // console.log(allTimeZones?.map((x) => x.name));
+  //
   return (
     <HeroTextWrapper>
       <BaseText>
@@ -216,17 +221,25 @@ export default function OverviewText() {
             setCountry(e.value);
           }}
         />
-        , today&apos;s date is <BoldedText text={formattedDate} />. Part of the{" "}
-        <BoldedText text={timeZoneLong || "none detected"} /> zone, it is
-        currently <BoldedText text={timeToSecond} /> on a {dayofWeek}. It&apos;s
-        the <BoldedText text={dayNumber} /> day of the week and a{" "}
+        , today&apos;s date is <BoldedText text={formattedDate} />. Currently{" "}
+        <BoldedText text={timeToSecond} /> on a {dayofWeek} in{" "}
+        <BoldedText text={timeZoneLong || "none detected"} />, it is the{" "}
+        <BoldedText text={dayNumber} /> day of the week and a{" "}
         <BoldedText text={typeOfDay} />.
       </BaseText>
 
-      <NoteText>
-        Note: In {country}, there are multiple time zones. Information being
-        displayed is for the &quot;{timeZone}&quot; region.
-      </NoteText>
+      {allTimeZones?.length > 1 && (
+        <NoteText>
+          Note: In {country}, there are multiple time zones. Information being
+          displayed is for the &quot;{timeZone}&quot; region. Other timezones
+          include{" "}
+          {allTimeZones?.map((x) => (
+            <button type="button" onClick={() => setTimezone(x)} key={x}>
+              {x}{" "}
+            </button>
+          ))}
+        </NoteText>
+      )}
     </HeroTextWrapper>
   );
 }
