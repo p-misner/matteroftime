@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import styled from "styled-components";
 
-import { fontSize, fontColor, maxWidth } from "./stylingConstants";
+import { fontSize, fontColor, maxWidth, fontFamily } from "./stylingConstants";
 import Link from "next/link";
 
 export const FullWidth = styled.div`
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 
 export const HeaderH3 = styled.h2`
   font-size: ${fontSize.large};
-  font-family: Outfit;
+  font-family: ${fontFamily.sanserif};
   color: ${fontColor};
 `;
 
@@ -52,5 +52,5 @@ export const AboutBox = styled.div`
 
 export const Question = styled.p`
   font-size: ${fontSize.large};
-  font-family: Outfit;
+  font-family: ${fontFamily.sanserif};
 `;
