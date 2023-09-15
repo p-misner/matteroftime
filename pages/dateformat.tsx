@@ -8,7 +8,7 @@ import {
 } from "../src/styling/infoPageStyle";
 import { Legend } from "../src/components/Legend";
 import { LegendDataType } from "../src/styling/typeConstants";
-
+import { GeoCustom } from "../src/components/Map";
 const Blog = () => {
   const DummyData: LegendDataType[] = [
     { symbol: "square", text: "text here", color: "#00f" },
@@ -30,6 +30,7 @@ const Blog = () => {
       <OutlinedWrapper>
         <Legend legendData={DummyData} />
         <p> map here</p>
+        <GeoCustom width={800} height={600} />
       </OutlinedWrapper>
       <OutlinedWrapper>
         <HeaderH2> Endianness aka Date Order</HeaderH2>
