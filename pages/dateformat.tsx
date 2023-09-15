@@ -1,12 +1,20 @@
 import React from "react";
-import Header from "../src//components/Header";
+import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 import {
   HeaderH2,
   OutlinedWrapper,
   Subtitle,
 } from "../src/styling/infoPageStyle";
+import { Legend } from "../src/components/Legend";
+import { LegendDataType } from "../src/styling/typeConstants";
+
 const Blog = () => {
+  const DummyData: LegendDataType[] = [
+    { symbol: "square", text: "text here", color: "#00f" },
+    { symbol: "square", text: "text here 2", color: "#f0f" },
+    { symbol: "square", text: "text here 3", color: "#0ff" },
+  ];
   return (
     <div>
       <Header />
@@ -20,7 +28,7 @@ const Blog = () => {
         </Subtitle>
       </OutlinedWrapper>
       <OutlinedWrapper>
-        <p> legend here</p>
+        <Legend legendData={DummyData} />
         <p> map here</p>
       </OutlinedWrapper>
       <OutlinedWrapper>
