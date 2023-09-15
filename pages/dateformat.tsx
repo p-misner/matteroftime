@@ -29,8 +29,7 @@ const Blog = () => {
       </OutlinedWrapper>
       <OutlinedWrapper>
         <Legend legendData={DummyData} />
-        <p> map here</p>
-        <GeoCustom width={800} height={600} />
+        <GeoCustom width={1200} height={900} />
       </OutlinedWrapper>
       <OutlinedWrapper>
         <HeaderH2> Endianness aka Date Order</HeaderH2>
