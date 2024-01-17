@@ -18,15 +18,19 @@ import TextTooltip from "./Tooltips";
 function BoldedText({ text }: { text: string }) {
   return (
     <TextTooltip delay={100} text={text}>
-      <span style={{ fontWeight: 700 }}> {text}</span>
+      <span suppressHydrationWarning={true} style={{ fontWeight: 700 }}>
+        {" "}
+        {text}
+      </span>
     </TextTooltip>
   );
 }
 
-// from dropdown, allow change of region selection.
-// do dumb dropdown, come back to redesign later
-// then, based on region selected, update how date, day of week and weekend looks.
-//final step: change note to show alternate timezones within country
+// ✅from dropdown, allow change of region selection.
+// ✅do dumb dropdown, come back to redesign later
+// ✅ then, based on region selected, update how date, day of week and weekend looks. ✅
+//✅final step: change note to show alternate timezones within country
+// final final: have dropdown sort
 
 function LuxonTime() {
   const [time, setTime] = useState<DateTime>(DateTime.now());
@@ -143,6 +147,8 @@ export default function OverviewText() {
     getCountriesForTimezone(timeZone)[0]?.name
   );
 
+  // end here
+
   const countryCode = countryCodes.filter((x) => x.name == country)[0].code;
   const countryDateDetails = dateData.filter(
     (x) => x.CountryCode == countryCode
@@ -197,6 +203,11 @@ export default function OverviewText() {
   const allTimeZones = getTimezonesForCountry(countryCode)?.map((x) => x.name);
   // console.log(allTimeZones?.map((x) => x.name));
   //
+
+  const listOptions = countryCodes.map((x) => ({
+    value: x.name,
+    label: x.name,
+  }));
   return (
     <HeroTextWrapper>
       <BaseText>
@@ -213,8 +224,12 @@ export default function OverviewText() {
               width: "400px",
             }),
           }}
-          options={countryCodes.map((x) => ({ value: x.name, label: x.name }))}
-          defaultValue={{ label: country, value: country }}
+          options={listOptions}
+          value={listOptions.find((option) => option.value === country)}
+          isOptionSelected={(option) => {
+            console.log(option.value == country);
+            return option.value == country ? true : false;
+          }}
           onChange={(e) => {
             const cc = countryCodes.filter((x) => x.name == e.value)[0].code;
             setTimezone(getTimezonesForCountry(cc)[0].name);
