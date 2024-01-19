@@ -26014,7 +26014,7 @@
           "arcs": [[[659]], [[660]]],
           "type": "MultiPolygon",
           "id": "FLK",
-          "properties": { "name": "Falkland Is." }
+          "properties": { "name": "Falkland Islands" }
         },
         {
           "arcs": [
@@ -26209,7 +26209,7 @@
           "arcs": [[774]],
           "type": "Polygon",
           "id": "HMD",
-          "properties": { "name": "Heard I. and McDonald Is." }
+          "properties": { "name": "Heard Island and McDonald Islands" }
         },
         {
           "arcs": [[[775, 776, 777, -766, 778]]],
@@ -26477,7 +26477,7 @@
           "arcs": [[[979]], [[980]], [[981]], [[982, 983]]],
           "type": "MultiPolygon",
           "id": "KOR",
-          "properties": { "name": "Korea" }
+          "properties": { "name": "South Korea" }
         },
         {
           "arcs": [[984, -18, 985, 986]],
@@ -26495,7 +26495,7 @@
           "arcs": [[990, -977, 991, 992, -450]],
           "type": "Polygon",
           "id": "LAO",
-          "properties": { "name": "Lao PDR" }
+          "properties": { "name": "Laos" }
         },
         {
           "arcs": [[-925, 993, 994]],
@@ -26882,7 +26882,7 @@
           "arcs": [[[1208, 1209, -983, 1210, -445]]],
           "type": "MultiPolygon",
           "id": "PRK",
-          "properties": { "name": "Dem. Rep. Korea" }
+          "properties": { "name": "North Korea" }
         },
         {
           "arcs": [[[1211]], [[1212]], [[1213]], [[1214]], [[1215, -633]]],
@@ -27046,7 +27046,9 @@
           "arcs": [[[1315]]],
           "type": "MultiPolygon",
           "id": "SGS",
-          "properties": { "name": "S. Geo. and S. Sandw. Is." }
+          "properties": {
+            "name": "South Georgia and the South Sandwich Islands"
+          }
         },
         {
           "arcs": [
@@ -27108,7 +27110,7 @@
           "arcs": [[[1335]]],
           "type": "MultiPolygon",
           "id": "STP",
-          "properties": { "name": "S\u00e3o Tom\u00e9 and Principe" }
+          "properties": { "name": "Sao Tome and Principe" }
         },
         {
           "arcs": [[-664, -239, -771, 1336]],
@@ -27138,13 +27140,13 @@
           "arcs": [[-1061, 1343]],
           "type": "Polygon",
           "id": "SWZ",
-          "properties": { "name": "Swaziland" }
+          "properties": { "name": "Eswatini" }
         },
         {
           "arcs": [[1344, -1014]],
           "type": "Polygon",
           "id": "SXM",
-          "properties": { "name": "Sint Maarten" }
+          "properties": { "name": "Saint Martin" }
         },
         {
           "arcs": [[-913, 911, -911, -939, -926, -995, 1345, 1346]],
@@ -27335,7 +27337,7 @@
           ],
           "type": "MultiPolygon",
           "id": "USA",
-          "properties": { "name": "United States" }
+          "properties": { "name": "United States of America" }
         },
         {
           "arcs": [[[-534, 1455]], [[1456, -532]]],
@@ -27363,13 +27365,13 @@
           "arcs": [[-932]],
           "type": "Polygon",
           "id": "VAT",
-          "properties": { "name": "Vatican" }
+          "properties": { "name": "Holy See" }
         },
         {
           "arcs": [[[1460]]],
           "type": "MultiPolygon",
           "id": "VCT",
-          "properties": { "name": "St. Vin. and Gren." }
+          "properties": { "name": "Saint Vincent and the Grenadines" }
         },
         {
           "arcs": [[[1461]], [[1462]], [[1463]], [[-772, -250, -513, 1464]]],

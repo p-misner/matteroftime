@@ -150,7 +150,7 @@
     "DaylightSavings": ""
   },
   {
-    "FullName": "American Samoa",
+    "FullName": "Samoa",
     "CountryCode": "AS",
     "DateFormat": "MDY",
     "Punctuation": "/",
@@ -2342,7 +2342,7 @@
   {
     "FullName": "Malaysia",
     "CountryCode": "MY",
-    "DateFormat": "DMY",
+    "DateFormat": "DMY, MDY",
     "Punctuation": "-",
     "DateFormatDefault": "dd-LL-yyyy",
     "DateFormatShort": "",
@@ -2567,7 +2567,7 @@
   {
     "FullName": "Panama",
     "CountryCode": "PA",
-    "DateFormat": "MDY,DMY",
+    "DateFormat": "DMY, MDY",
     "Punctuation": "/",
     "DateFormatDefault": "LL/dd/yyyy",
     "DateFormatShort": "",
@@ -2702,7 +2702,7 @@
   {
     "FullName": "Puerto Rico",
     "CountryCode": "PR",
-    "DateFormat": "MDY, YMD",
+    "DateFormat": "DMY, MDY",
     "Punctuation": "space",
     "DateFormatDefault": "LLLL d, yyyy",
     "DateFormatShort": "",
@@ -3062,7 +3062,7 @@
   {
     "FullName": "Somalia",
     "CountryCode": "SO",
-    "DateFormat": "DMY",
+    "DateFormat": "DMY, MDY",
     "Punctuation": "/",
     "DateFormatDefault": "dd/LL/yyyy",
     "DateFormatShort": "",
@@ -3390,7 +3390,7 @@
     "DaylightSavings": ""
   },
   {
-    "FullName": "Taiwan, Province of China",
+    "FullName": "Taiwan",
     "CountryCode": "TW",
     "DateFormat": "YMD",
     "Punctuation": "/",
@@ -3677,7 +3677,7 @@
   {
     "FullName": "South Africa",
     "CountryCode": "ZA",
-    "DateFormat": "DMY, YMD",
+    "DateFormat": "MDY, YMD, DMY",
     "Punctuation": "/",
     "DateFormatDefault": "yyyy/LL/dd",
     "DateFormatShort": "",
@@ -3707,7 +3707,7 @@
   {
     "FullName": "Zimbabwe",
     "CountryCode": "ZW",
-    "DateFormat": "YMD",
+    "DateFormat": "DMY",
     "Punctuation": "None Specified",
     "DateFormatDefault": "None Specified",
     "DateFormatShort": "",

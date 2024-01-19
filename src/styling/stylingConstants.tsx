@@ -27,13 +27,14 @@ export const fontWeight = {
   semibold: 600,
 };
 
+export type HEX = `#${string}`;
 export const vizColors: {
-  yellow: string;
-  brightGreen: string;
-  adamantineBlue: string;
-  pastelPurple: string;
-  pink: string;
-  neonSeaFoam: string;
+  yellow: HEX;
+  brightGreen: HEX;
+  adamantineBlue: HEX;
+  pastelPurple: HEX;
+  pink: HEX;
+  neonSeaFoam: HEX;
 } = {
   yellow: "#F9D147",
   brightGreen: "#9BE400",

@@ -1,15 +1,20 @@
 /* eslint-disable react/jsx-handler-names */
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import * as topojson from "topojson-client";
-import { scaleQuantize } from "@visx/scale";
+import { scaleQuantize, scaleOrdinal } from "@visx/scale";
 import { CustomProjection, Graticule } from "@visx/geo";
 import { Projection } from "@visx/geo/lib/types";
 import { Zoom } from "@visx/zoom";
-import { geoConicConformal } from "d3-geo";
+import { geoPath, geoGraticule10 } from "d3-geo";
+
+import { withTooltip, Tooltip, defaultStyles } from "@visx/tooltip";
+import { WithTooltipProvidedProps } from "@visx/tooltip/lib/enhancers/withTooltip";
 
 import { geoInterruptedMollweideHemispheres } from "d3-geo-projection";
+import { vizColors } from "../styling/stylingConstants";
 
 import topology from "../data/world-topo.json";
+import dateData from "../data/dateData.json";
 
 export type GeoCustomProps = {
   width: number;
@@ -24,114 +29,204 @@ interface FeatureShape {
   properties: { name: string };
 }
 
-export const background = "#252b7e";
-const purple = "#201c4e";
+type TooltipData = {
+  country: string;
+  dateFormat: string;
+  color: string;
+};
+const tooltipStyles = {
+  ...defaultStyles,
+  minWidth: 60,
+  backgroundColor: "white",
+  color: "black",
+  border: "1px solid black",
+};
+
+// same as projection in Observable
 const PROJECTIONS: { [projection: string]: Projection } = {
   geoInterruptedMollweideHemispheres,
 };
 
+// world dataset I think
 // @ts-expect-error
 const world = topojson.feature(topology, topology.objects.units) as {
   type: "FeatureCollection";
   features: FeatureShape[];
 };
 
-const color = scaleQuantize({
-  domain: [
-    Math.min(...world.features.map((f) => f.geometry.coordinates.length)),
-    Math.max(...world.features.map((f) => f.geometry.coordinates.length)),
-  ],
+const dateColors = scaleOrdinal({
+  domain: ["DMY", "DMY, YMD", "YMD", "MDY, YMD, DMY", "MDY, YMD", "DMY, MDY"],
   range: [
-    "#ffb01d",
-    "#ffa020",
-    "#ff9221",
-    "#ff8424",
-    "#ff7425",
-    "#fc5e2f",
-    "#f94b3a",
-    "#f63a48",
+    vizColors.adamantineBlue,
+    vizColors.brightGreen,
+    vizColors.neonSeaFoam,
+    vizColors.pastelPurple,
+    vizColors.pink,
+    vizColors.yellow,
   ],
 });
 
-// Next step: fit it to this: https://observablehq.com/d/42ba08f1bd210bc8
-// possible solving: https://gist.github.com/mbostock/4498292
-export function GeoCustom({ width, height, events = false }: GeoCustomProps) {
-  const [projection, setProjection] = useState<keyof typeof PROJECTIONS>(
-    "geoInterruptedMollweideHemispheres"
-  );
+export default withTooltip<GeoCustomProps, TooltipData>(
+  ({
+    width,
+    height,
+    events = false,
+    tooltipOpen,
+    tooltipLeft,
+    tooltipTop,
+    tooltipData,
+    hideTooltip,
+    showTooltip,
+  }: GeoCustomProps & WithTooltipProvidedProps<TooltipData>) => {
+    // ?? why is this a state we are not planning on changing it
+    const [projection, setProjection] = useState<keyof typeof PROJECTIONS>(
+      "geoInterruptedMollweideHemispheres"
+    );
 
-  const centerX = width / 2;
-  const centerY = height / 2;
-  const initialScale = (width / 630) * 100;
+    // event handlers
+    const handleMouseMove = useCallback(
+      (event: any, tooltipData: TooltipData) => {
+        // coordinates should be relative to the container in which Tooltip is rendered
+        const containerX = "clientX" in event ? event.clientX : 0;
+        const containerY = "clientY" in event ? event.clientY : 0;
 
-  return width < 10 ? null : (
-    <>
-      <Zoom<SVGSVGElement>
-        width={width}
-        height={height}
-        scaleXMin={100}
-        scaleXMax={1000}
-        scaleYMin={100}
-        scaleYMax={1000}
-        initialTransformMatrix={{
-          scaleX: initialScale,
-          scaleY: initialScale,
-          translateX: centerX,
-          translateY: centerY,
-          skewX: 0,
-          skewY: 0,
-        }}
-      >
-        {(zoom) => (
-          <div className="container">
-            <svg width={width} height={height}>
-              <rect
-                x={0}
-                y={0}
-                width={width}
-                height={height}
-                fill={"#fff"}
-                rx={14}
-              />
-              <CustomProjection<FeatureShape>
-                projection={PROJECTIONS[projection]}
-                data={world.features}
-                scale={zoom.transformMatrix.scaleX}
-                translate={[
-                  zoom.transformMatrix.translateX,
-                  zoom.transformMatrix.translateY,
-                ]}
-              >
-                {(customProjection) => (
-                  <g>
-                    <Graticule
-                      graticule={(g) => customProjection.path(g) || ""}
-                      stroke={"#000"}
-                    />
-                    {customProjection.features.map(({ feature, path }, i) => (
-                      <path
-                        key={`map-feature-${i}`}
-                        d={path || ""}
-                        fill={color(feature.geometry.coordinates.length)}
-                        stroke={background}
-                        strokeWidth={0.5}
-                        onClick={() => {
-                          if (events)
-                            alert(
-                              `Clicked: ${feature.properties.name} (${feature.id})`
-                            );
-                        }}
+        showTooltip({
+          tooltipLeft: containerX * 0.9,
+          tooltipTop: containerY * 0.9,
+          tooltipData,
+        });
+      },
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      [showTooltip]
+    );
+
+    const centerX = width / 2;
+    const centerY = height / 2;
+    const initialScale = (width / 630) * 100;
+    let tooltipTimeout: number;
+
+    return width < 10 ? null : (
+      <>
+        <Zoom<SVGSVGElement>
+          width={width}
+          height={height}
+          scaleXMin={100}
+          scaleXMax={1000}
+          scaleYMin={100}
+          scaleYMax={1000}
+        >
+          {(zoom) => (
+            <div>
+              <svg viewBox={`0 0 ${width} ${height}`}>
+                <rect x={0} y={0} width={width} height={height} fill="none" />
+                <path
+                  id="sphere"
+                  d={geoPath(geoInterruptedMollweideHemispheres())({
+                    type: "Sphere",
+                  })}
+                  fill="#F6F6FF"
+                />
+                <CustomProjection<FeatureShape>
+                  projection={PROJECTIONS[projection]}
+                  data={world.features}
+                >
+                  {(customProjection) => (
+                    <g clipPath="url(#clip)">
+                      <Graticule
+                        graticule={(g) => customProjection.path(g) || ""}
+                        stroke={"#fff"}
                       />
-                    ))}
-                  </g>
-                )}
-              </CustomProjection>
 
-              {/** intercept all mouse events */}
-            </svg>
-          </div>
-        )}
-      </Zoom>
-    </>
-  );
-}
+                      {customProjection.features.map(({ feature, path }, i) => (
+                        <path
+                          key={`map-feature-${i}`}
+                          d={path || ""}
+                          fill={dateColors(
+                            dateData.filter(
+                              (x) => x.FullName === feature.properties.name
+                            )[0]?.DateFormat
+                          )}
+                          stroke={"#fff"}
+                          strokeWidth={0.5}
+                          onClick={() => {
+                            alert(
+                              `Clicked: ${feature.properties.name} (${
+                                feature.id
+                              }). Date format is ${
+                                dateData.filter(
+                                  (x) => x.FullName === feature.properties.name
+                                )[0]?.DateFormat
+                              } `
+                            );
+                          }}
+                          onMouseLeave={() => {
+                            tooltipTimeout = window.setTimeout(() => {
+                              hideTooltip();
+                            }, 300);
+                          }}
+                          onMouseMove={(e) => {
+                            console.log(this);
+                            if (tooltipTimeout) clearTimeout(tooltipTimeout);
+                            handleMouseMove(e, {
+                              country: feature.properties.name,
+                              dateFormat: dateData.filter(
+                                (x) => x.FullName === feature.properties.name
+                              )[0]?.DateFormat,
+                              color: dateColors(
+                                dateData.filter(
+                                  (x) => x.FullName === feature.properties.name
+                                )[0]?.DateFormat
+                              ),
+                            });
+                          }}
+                        />
+                      ))}
+                      <path
+                        id="sphere"
+                        d={geoPath(geoInterruptedMollweideHemispheres())({
+                          type: "Sphere",
+                        })}
+                        fill="none"
+                        stroke="#AEAEFF"
+                        strokeWidth={4}
+                      />
+                    </g>
+                  )}
+                </CustomProjection>
+
+                <defs>
+                  {/*Sphere outline and related clip path */}
+                  <path
+                    id="sphere"
+                    d={geoPath(geoInterruptedMollweideHemispheres())({
+                      type: "Sphere",
+                    })}
+                  />
+                  <clipPath id="clip">
+                    <use href="#sphere" />
+                  </clipPath>
+                </defs>
+                {/** intercept all mouse events */}
+              </svg>
+              {tooltipOpen && tooltipData && (
+                <Tooltip
+                  top={tooltipTop}
+                  left={tooltipLeft}
+                  style={tooltipStyles}
+                >
+                  <h3> {tooltipData.country}</h3>
+                  <div>
+                    <p style={{ color: tooltipData.color }}>
+                      {" "}
+                      {tooltipData.dateFormat}
+                    </p>
+                  </div>
+                </Tooltip>
+              )}
+            </div>
+          )}
+        </Zoom>
+      </>
+    );
+  }
+);
