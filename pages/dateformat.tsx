@@ -6,14 +6,18 @@ import {
   OutlinedWrapper,
   Subtitle,
 } from "../src/styling/infoPageStyle";
+import { vizColors } from "../src/styling/stylingConstants";
 import { Legend } from "../src/components/Legend";
 import { LegendDataType } from "../src/styling/typeConstants";
-
+import GeoCustom from "../src/components/Map";
 const Blog = () => {
   const DummyData: LegendDataType[] = [
-    { symbol: "square", text: "text here", color: "#00f" },
-    { symbol: "square", text: "text here 2", color: "#f0f" },
-    { symbol: "square", text: "text here 3", color: "#0ff" },
+    { symbol: "square", text: "DMY", color: vizColors.adamantineBlue },
+    { symbol: "square", text: "DMY/YMD", color: vizColors.brightGreen },
+    { symbol: "square", text: "YMD", color: vizColors.neonSeaFoam },
+    { symbol: "square", text: "MDY/YMD", color: vizColors.pink },
+    { symbol: "square", text: "DMY/MDY", color: vizColors.yellow },
+    { symbol: "square", text: "MDY/YMD/DMY", color: vizColors.pastelPurple },
   ];
   return (
     <div>
@@ -29,7 +33,7 @@ const Blog = () => {
       </OutlinedWrapper>
       <OutlinedWrapper>
         <Legend legendData={DummyData} />
-        <p> map here</p>
+        <GeoCustom width={960} height={490} />
       </OutlinedWrapper>
       <OutlinedWrapper>
         <HeaderH2> Endianness aka Date Order</HeaderH2>
