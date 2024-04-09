@@ -236,8 +236,8 @@ export default function OverviewText() {
             setCountry(e.value);
           }}
         />
-        , today&apos;s date is <BoldedText text={formattedDate} />. Currently{" "}
-        <BoldedText text={timeToSecond} /> on a {dayofWeek} in{" "}
+        , the date is <BoldedText text={formattedDate} />. Currently{" "}
+        <BoldedText text={timeToSecond} /> on {dayofWeek} in{" "}
         <BoldedText text={timeZoneLong || "none detected"} />, it is the{" "}
         <BoldedText text={dayNumber} /> day of the week and a{" "}
         <BoldedText text={typeOfDay} />.

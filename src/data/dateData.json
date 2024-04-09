@@ -572,7 +572,7 @@
   {
     "FullName": "Democratic Republic of the Congo",
     "CountryCode": "CD",
-    "DateFormat": "",
+    "DateFormat": "DMY",
     "Punctuation": "None Specified",
     "DateFormatDefault": "None Specified",
     "DateFormatShort": "",
@@ -1322,7 +1322,7 @@
   {
     "FullName": "South Georgia and the South Sandwich Islands",
     "CountryCode": "GS",
-    "DateFormat": "",
+    "DateFormat": "DMY",
     "Punctuation": "None Specified",
     "DateFormatDefault": "None Specified",
     "DateFormatShort": "",
@@ -3287,7 +3287,7 @@
   {
     "FullName": "Timor-Leste",
     "CountryCode": "TL",
-    "DateFormat": "",
+    "DateFormat": "DMY",
     "Punctuation": "None Specified",
     "DateFormatDefault": "None Specified",
     "DateFormatShort": "",

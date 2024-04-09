@@ -25780,7 +25780,7 @@
           "arcs": [[[465, 466]], [[-177, 467, 468, 469, 470, 471]]],
           "type": "MultiPolygon",
           "id": "CIV",
-          "properties": { "name": "C\u00f4te d'Ivoire" }
+          "properties": { "name": "Ivory Coast" }
         },
         {
           "arcs": [
@@ -25813,7 +25813,7 @@
           ],
           "type": "MultiPolygon",
           "id": "COD",
-          "properties": { "name": "Dem. Rep. Congo" }
+          "properties": { "name": "Democratic Republic of the Congo" }
         },
         {
           "arcs": [[-510, -13, 510, 511, -474, -265]],

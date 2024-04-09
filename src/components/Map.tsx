@@ -37,6 +37,7 @@ type TooltipData = {
 const tooltipStyles = {
   ...defaultStyles,
   minWidth: 60,
+  minHeight: 100,
   backgroundColor: "white",
   color: "black",
   border: "1px solid black",
@@ -70,7 +71,6 @@ export default withTooltip<GeoCustomProps, TooltipData>(
   ({
     width,
     height,
-    events = false,
     tooltipOpen,
     tooltipLeft,
     tooltipTop,
@@ -86,13 +86,11 @@ export default withTooltip<GeoCustomProps, TooltipData>(
     // event handlers
     const handleMouseMove = useCallback(
       (event: any, tooltipData: TooltipData) => {
-        // coordinates should be relative to the container in which Tooltip is rendered
-        const containerX = "clientX" in event ? event.clientX : 0;
-        const containerY = "clientY" in event ? event.clientY : 0;
-
+        const containerX = "clientX" in event ? event.nativeEvent.offsetX : 0;
+        const containerY = "clientY" in event ? event.nativeEvent.offsetY : 0;
         showTooltip({
-          tooltipLeft: containerX * 0.9,
-          tooltipTop: containerY * 0.9,
+          tooltipLeft: containerX,
+          tooltipTop: containerY,
           tooltipData,
         });
       },
@@ -100,9 +98,6 @@ export default withTooltip<GeoCustomProps, TooltipData>(
       [showTooltip]
     );
 
-    const centerX = width / 2;
-    const centerY = height / 2;
-    const initialScale = (width / 630) * 100;
     let tooltipTimeout: number;
 
     return width < 10 ? null : (
@@ -115,7 +110,7 @@ export default withTooltip<GeoCustomProps, TooltipData>(
           scaleYMin={100}
           scaleYMax={1000}
         >
-          {(zoom) => (
+          {() => (
             <div>
               <svg viewBox={`0 0 ${width} ${height}`}>
                 <rect x={0} y={0} width={width} height={height} fill="none" />
@@ -165,7 +160,6 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                             }, 300);
                           }}
                           onMouseMove={(e) => {
-                            console.log(this);
                             if (tooltipTimeout) clearTimeout(tooltipTimeout);
                             handleMouseMove(e, {
                               country: feature.properties.name,
