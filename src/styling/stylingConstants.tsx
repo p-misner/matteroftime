@@ -25,6 +25,7 @@ export const fontFamily = {
 
 export const fontWeight = {
   semibold: 600,
+  regular: 400,
 };
 
 export type HEX = `#${string}`;
@@ -35,6 +36,7 @@ export const vizColors: {
   pastelPurple: HEX;
   pink: HEX;
   neonSeaFoam: HEX;
+  white: HEX;
 } = {
   yellow: "#F9D147",
   brightGreen: "#9BE400",
@@ -42,4 +44,5 @@ export const vizColors: {
   pastelPurple: "#9980FA",
   pink: "#FA80D8",
   neonSeaFoam: "#1ADB9A",
+  white: "#ffffff",
 };

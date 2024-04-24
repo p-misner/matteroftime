@@ -12,7 +12,12 @@ import { WithTooltipProvidedProps } from "@visx/tooltip/lib/enhancers/withToolti
 
 import { geoInterruptedMollweideHemispheres } from "d3-geo-projection";
 import { vizColors } from "../styling/stylingConstants";
-import { CountryPathHoverEffect } from "../styling/mapStyle";
+import {
+  CountryPathHoverEffect,
+  DateWrapper,
+  TimeDiv,
+  TooltipDiv,
+} from "../styling/mapStyle";
 
 import topology from "../data/world-topo.json";
 import dateData from "../data/dateData.json";
@@ -37,12 +42,38 @@ type TooltipData = {
 };
 const tooltipStyles = {
   ...defaultStyles,
-  minWidth: 60,
-  minHeight: 100,
   backgroundColor: "white",
-  color: "black",
   border: "1px solid black",
 };
+
+function TooltipTitle(dateFormatString: string) {
+  switch (dateFormatString) {
+    case "DMY":
+      return "Day, Month, Year";
+    case "YMD":
+      return "Year, Month, Day";
+    default:
+      return "Multiple Date Formats";
+  }
+}
+function TooltipSubtitle(dateFormatString: string) {
+  switch (dateFormatString) {
+    case "DMY":
+      return "This country primarily uses the DMY format for dates.";
+    case "DMY, YMD":
+      return "This country uses a mix of DMY and YMD formats.";
+    case "YMD":
+      return "This country primarily uses the YMD format for dates.";
+    case "MDY, YMD":
+      return "Primarily using MDY for dates, this country also uses the YMD formats.";
+    case "DMY, MDY":
+      return "This country uses a mix of DMY and MDY formats.";
+    case "MDY, YMD, DMY":
+      return "This country uses a mix of MDY, YMD and DMY formats.";
+    default:
+      return "Multiple Date Formats";
+  }
+}
 
 // same as projection in Observable
 const PROJECTIONS: { [projection: string]: Projection } = {
@@ -215,13 +246,38 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                   left={tooltipLeft}
                   style={tooltipStyles}
                 >
-                  <h3> {tooltipData.country}</h3>
-                  <div>
-                    <p style={{ color: tooltipData.color }}>
+                  <TooltipDiv>
+                    <h3>
                       {" "}
-                      {tooltipData.dateFormat}
-                    </p>
-                  </div>
+                      {tooltipData.country}
+                      {/* <span>{TooltipTitle(tooltipData.dateFormat)}</span>{" "} */}
+                    </h3>
+                    <DateWrapper>
+                      <TimeDiv timeframe="year">
+                        <h3>Year</h3>
+                        <h2> YYYY</h2>
+                      </TimeDiv>
+                      <TimeDiv timeframe="separator">
+                        <h3>separ</h3>
+                        <h2> -</h2>
+                      </TimeDiv>
+                      <TimeDiv timeframe="month">
+                        <h3>Month</h3>
+                        <h2> LL</h2>
+                      </TimeDiv>
+                      <TimeDiv timeframe="separator">
+                        <h3>separ</h3>
+                        <h2> -</h2>
+                      </TimeDiv>
+                      <TimeDiv timeframe="day">
+                        <h3>Day</h3>
+                        <h2> d</h2>
+                      </TimeDiv>
+                    </DateWrapper>
+                    <div>
+                      <p>{TooltipSubtitle(tooltipData.dateFormat)}</p>
+                    </div>
+                  </TooltipDiv>
                 </TooltipWithBounds>
               )}
             </div>
