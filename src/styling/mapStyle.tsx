@@ -5,7 +5,8 @@ export const CountryPathHoverEffect = styled.path`
   stroke-width: 0.5;
 
   &:hover {
-    stroke-width: 1;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    stroke-width: 1px;
+    stroke: #000;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.05));
   }
 `;

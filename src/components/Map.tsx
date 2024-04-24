@@ -7,7 +7,7 @@ import { Projection } from "@visx/geo/lib/types";
 import { Zoom } from "@visx/zoom";
 import { geoPath, geoGraticule10 } from "d3-geo";
 
-import { withTooltip, Tooltip, defaultStyles } from "@visx/tooltip";
+import { withTooltip, defaultStyles, TooltipWithBounds } from "@visx/tooltip";
 import { WithTooltipProvidedProps } from "@visx/tooltip/lib/enhancers/withTooltip";
 
 import { geoInterruptedMollweideHemispheres } from "d3-geo-projection";
@@ -142,23 +142,29 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                               (x) => x.FullName === feature.properties.name
                             )[0]?.DateFormat
                           )}
-                          // stroke={"#fff"}
-                          // strokeWidth={0.5}
-                          onClick={() => {
-                            alert(
-                              `Clicked: ${feature.properties.name} (${
-                                feature.id
-                              }). Date format is ${
-                                dateData.filter(
-                                  (x) => x.FullName === feature.properties.name
-                                )[0]?.DateFormat
-                              } `
-                            );
-                          }}
+                          // onClick={() => {
+                          //   alert(
+                          //     `Clicked: ${feature.properties.name} (${
+                          //       feature.id
+                          //     }). Date format is ${
+                          //       dateData.filter(
+                          //         (x) => x.FullName === feature.properties.name
+                          //       )[0]?.DateFormat
+                          //     } `
+                          //   );
+                          // }}
                           onMouseLeave={() => {
                             tooltipTimeout = window.setTimeout(() => {
                               hideTooltip();
                             }, 300);
+                          }}
+                          onMouseEnter={(e) => {
+                            // this removes the country and then reappends it to map so that it is at the top of the stack
+                            // might need to check it's not just infinitely duplicating itself but for now, good.
+                            let target = e.currentTarget;
+                            let parent = e.currentTarget.parentElement;
+                            target.remove();
+                            parent?.append(target);
                           }}
                           onMouseMove={(e) => {
                             if (tooltipTimeout) clearTimeout(tooltipTimeout);
@@ -204,7 +210,7 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                 {/** intercept all mouse events */}
               </svg>
               {tooltipOpen && tooltipData && (
-                <Tooltip
+                <TooltipWithBounds
                   top={tooltipTop}
                   left={tooltipLeft}
                   style={tooltipStyles}
@@ -216,7 +222,7 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                       {tooltipData.dateFormat}
                     </p>
                   </div>
-                </Tooltip>
+                </TooltipWithBounds>
               )}
             </div>
           )}
