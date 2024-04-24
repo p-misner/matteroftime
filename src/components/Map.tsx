@@ -12,6 +12,7 @@ import { WithTooltipProvidedProps } from "@visx/tooltip/lib/enhancers/withToolti
 
 import { geoInterruptedMollweideHemispheres } from "d3-geo-projection";
 import { vizColors } from "../styling/stylingConstants";
+import { CountryPathHoverEffect } from "../styling/mapStyle";
 
 import topology from "../data/world-topo.json";
 import dateData from "../data/dateData.json";
@@ -133,7 +134,7 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                       />
 
                       {customProjection.features.map(({ feature, path }, i) => (
-                        <path
+                        <CountryPathHoverEffect
                           key={`map-feature-${i}`}
                           d={path || ""}
                           fill={dateColors(
@@ -141,8 +142,8 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                               (x) => x.FullName === feature.properties.name
                             )[0]?.DateFormat
                           )}
-                          stroke={"#fff"}
-                          strokeWidth={0.5}
+                          // stroke={"#fff"}
+                          // strokeWidth={0.5}
                           onClick={() => {
                             alert(
                               `Clicked: ${feature.properties.name} (${
