@@ -25589,7 +25589,7 @@
           "arcs": [[261, 262, 263, 264, 265, 266]],
           "type": "Polygon",
           "id": "CAF",
-          "properties": { "name": "Central African Rep." }
+          "properties": { "name": "Central African Republic" }
         },
         {
           "arcs": [
@@ -25819,7 +25819,7 @@
           "arcs": [[-510, -13, 510, 511, -474, -265]],
           "type": "Polygon",
           "id": "COG",
-          "properties": { "name": "Congo" }
+          "properties": { "name": "Republic of the Congo" }
         },
         {
           "arcs": [[[512, -249, 513, 514, 515, 516, 517]]],
@@ -26041,7 +26041,7 @@
           "arcs": [[[676]], [[677]]],
           "type": "MultiPolygon",
           "id": "FRO",
-          "properties": { "name": "Faeroe Is." }
+          "properties": { "name": "Faeroe Islands" }
         },
         {
           "arcs": [[[678]]],
@@ -27028,7 +27028,7 @@
           "arcs": [[-650, -969, 1311, -496, -263, -1310]],
           "type": "Polygon",
           "id": "SSD",
-          "properties": { "name": "S. Sudan" }
+          "properties": { "name": "South Sudan" }
         },
         {
           "arcs": [[-1044, -709, -714, 1312, -711, 1313, -1069]],
@@ -27068,7 +27068,7 @@
           ],
           "type": "MultiPolygon",
           "id": "SLB",
-          "properties": { "name": "Solomon Is." }
+          "properties": { "name": "Solomon Islands" }
         },
         {
           "arcs": [[[1329]], [[-997, 1330, -706]]],

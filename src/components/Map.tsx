@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-handler-names */
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import * as topojson from "topojson-client";
 import { scaleQuantize, scaleOrdinal } from "@visx/scale";
 import { CustomProjection, Graticule } from "@visx/geo";
@@ -7,15 +7,23 @@ import { Projection } from "@visx/geo/lib/types";
 import { Zoom } from "@visx/zoom";
 import { geoPath, geoGraticule10 } from "d3-geo";
 
-import { withTooltip, Tooltip, defaultStyles } from "@visx/tooltip";
+import { withTooltip, defaultStyles, TooltipWithBounds } from "@visx/tooltip";
 import { WithTooltipProvidedProps } from "@visx/tooltip/lib/enhancers/withTooltip";
+import { getTimezonesForCountry } from "countries-and-timezones";
+import { DateTime } from "luxon";
 
 import { geoInterruptedMollweideHemispheres } from "d3-geo-projection";
 import { vizColors } from "../styling/stylingConstants";
-import { CountryPathHoverEffect } from "../styling/mapStyle";
+import {
+  CountryPathHoverEffect,
+  DateWrapper,
+  TimeDiv,
+  TooltipDiv,
+} from "../styling/mapStyle";
 
 import topology from "../data/world-topo.json";
 import dateData from "../data/dateData.json";
+import { defaultDateFormatter } from "./utils";
 
 export type GeoCustomProps = {
   width: number;
@@ -32,17 +40,36 @@ interface FeatureShape {
 
 type TooltipData = {
   country: string;
+  countryCode: string;
   dateFormat: string;
+  dateFormatDefault: string;
+  punctuation: string;
   color: string;
 };
 const tooltipStyles = {
   ...defaultStyles,
-  minWidth: 60,
-  minHeight: 100,
   backgroundColor: "white",
-  color: "black",
   border: "1px solid black",
 };
+
+function TooltipSubtitle(dateFormatString: string) {
+  switch (dateFormatString) {
+    case "DMY":
+      return "This country primarily uses the DMY format for dates or (*) has no date format specified so defaults to the international standard.";
+    case "DMY, YMD":
+      return "This country uses a mix of DMY and YMD formats.";
+    case "YMD":
+      return "This country primarily uses the YMD format for dates.";
+    case "MDY, YMD":
+      return "Primarily using MDY for dates, this country also uses the YMD formats.";
+    case "DMY, MDY":
+      return "This country uses a mix of DMY and MDY formats.";
+    case "MDY, YMD, DMY":
+      return "This country uses a mix of MDY, YMD and DMY formats.";
+    default:
+      return "Multiple Date Formats";
+  }
+}
 
 // same as projection in Observable
 const PROJECTIONS: { [projection: string]: Projection } = {
@@ -83,6 +110,7 @@ export default withTooltip<GeoCustomProps, TooltipData>(
     const [projection, setProjection] = useState<keyof typeof PROJECTIONS>(
       "geoInterruptedMollweideHemispheres"
     );
+    const [countryTime, setCountryTime] = useState<DateTime>(DateTime.now());
 
     // event handlers
     const handleMouseMove = useCallback(
@@ -142,28 +170,35 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                               (x) => x.FullName === feature.properties.name
                             )[0]?.DateFormat
                           )}
-                          // stroke={"#fff"}
-                          // strokeWidth={0.5}
-                          onClick={() => {
-                            alert(
-                              `Clicked: ${feature.properties.name} (${
-                                feature.id
-                              }). Date format is ${
-                                dateData.filter(
-                                  (x) => x.FullName === feature.properties.name
-                                )[0]?.DateFormat
-                              } `
-                            );
-                          }}
                           onMouseLeave={() => {
                             tooltipTimeout = window.setTimeout(() => {
                               hideTooltip();
                             }, 300);
                           }}
+                          onMouseEnter={(e) => {
+                            //gets time in country at one instant
+
+                            // this removes the country and then reappends it to map so that it is at the top of the stack
+                            // might need to check it's not just infinitely duplicating itself but for now, good.
+                            let target = e.currentTarget;
+                            let parent = e.currentTarget.parentElement;
+                            target.remove();
+                            parent?.append(target);
+                          }}
                           onMouseMove={(e) => {
                             if (tooltipTimeout) clearTimeout(tooltipTimeout);
                             handleMouseMove(e, {
+                              //Where data for tooltip gets inputted
                               country: feature.properties.name,
+                              countryCode: dateData.filter(
+                                (x) => x.FullName === feature.properties.name
+                              )[0]?.CountryCode,
+                              dateFormatDefault: dateData.filter(
+                                (x) => x.FullName === feature.properties.name
+                              )[0]?.DateFormatDefault,
+                              punctuation: dateData.filter(
+                                (x) => x.FullName === feature.properties.name
+                              )[0]?.Punctuation,
                               dateFormat: dateData.filter(
                                 (x) => x.FullName === feature.properties.name
                               )[0]?.DateFormat,
@@ -204,19 +239,41 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                 {/** intercept all mouse events */}
               </svg>
               {tooltipOpen && tooltipData && (
-                <Tooltip
+                <TooltipWithBounds
                   top={tooltipTop}
                   left={tooltipLeft}
                   style={tooltipStyles}
                 >
-                  <h3> {tooltipData.country}</h3>
-                  <div>
-                    <p style={{ color: tooltipData.color }}>
-                      {" "}
-                      {tooltipData.dateFormat}
-                    </p>
-                  </div>
-                </Tooltip>
+                  <TooltipDiv>
+                    <h3>{tooltipData.country}</h3>
+
+                    <DateWrapper>
+                      <TimeDiv timeframe={tooltipData.dateFormat}>
+                        <h2>
+                          {" "}
+                          {tooltipData &&
+                            tooltipData.dateFormatDefault &&
+                            DateTime.now()
+                              .setZone(
+                                getTimezonesForCountry(
+                                  tooltipData.countryCode
+                                )?.map((x) => x.name)[0]
+                              )
+                              .toFormat(
+                                tooltipData.dateFormatDefault ==
+                                  "None Specified"
+                                  ? defaultDateFormatter(tooltipData.dateFormat)
+                                  : tooltipData.dateFormatDefault
+                              )
+                              .toString()}
+                        </h2>
+                      </TimeDiv>
+                    </DateWrapper>
+                    <div>
+                      <p>{TooltipSubtitle(tooltipData.dateFormat)}</p>
+                    </div>
+                  </TooltipDiv>
+                </TooltipWithBounds>
               )}
             </div>
           )}
