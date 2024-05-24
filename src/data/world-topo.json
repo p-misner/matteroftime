@@ -25589,7 +25589,7 @@
           "arcs": [[261, 262, 263, 264, 265, 266]],
           "type": "Polygon",
           "id": "CAF",
-          "properties": { "name": "Central African Rep." }
+          "properties": { "name": "Central African Republic" }
         },
         {
           "arcs": [
@@ -25819,7 +25819,7 @@
           "arcs": [[-510, -13, 510, 511, -474, -265]],
           "type": "Polygon",
           "id": "COG",
-          "properties": { "name": "Congo" }
+          "properties": { "name": "Republic of the Congo" }
         },
         {
           "arcs": [[[512, -249, 513, 514, 515, 516, 517]]],

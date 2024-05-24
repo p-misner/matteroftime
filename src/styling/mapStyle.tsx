@@ -49,10 +49,11 @@ export const DateWrapper = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
+  margin: 8px 0px;
 `;
 
 type TimeDivInputs = {
-  timeframe: "year" | "day" | "month" | "separator";
+  timeframe: string;
   //   color: HEX;
 };
 export const TimeDiv = styled.div<TimeDivInputs>`
@@ -65,32 +66,40 @@ export const TimeDiv = styled.div<TimeDivInputs>`
     font-size: ${fontSize.small};
     font-weight: ${fontWeight.regular};
     color: ${(props) =>
-      props.timeframe === "year"
-        ? vizColors.neonSeaFoam
-        : props.timeframe === "month"
-        ? vizColors.pink
-        : props.timeframe === "day"
+      props.timeframe === "DMY"
         ? vizColors.adamantineBlue
-        : props.timeframe === "separator"
-        ? vizColors.white
+        : props.timeframe === "DMY, YMD"
+        ? vizColors.brightGreen
+        : props.timeframe === "YMD"
+        ? vizColors.neonSeaFoam
+        : props.timeframe === "MDY/YMD"
+        ? vizColors.pink
+        : props.timeframe === "DMY/MDY"
+        ? vizColors.yellow
+        : props.timeframe === "MDY/YMD/DMY"
+        ? vizColors.pastelPurple
         : fontColor};
   }
   h2 {
     font-family: ${fontFamily.sanserif};
-    font-size: ${fontSize.regular};
+    font-size: ${fontSize.large};
     font-weight: ${fontWeight.regular};
     text-decoration: underline;
     text-decoration-thickness: 6px;
     text-underline-offset: 4px;
     text-decoration-color: ${(props) =>
-      props.timeframe === "year"
-        ? vizColors.neonSeaFoam
-        : props.timeframe === "month"
-        ? vizColors.pink
-        : props.timeframe === "day"
+      props.timeframe === "DMY"
         ? vizColors.adamantineBlue
-        : props.timeframe === "separator"
-        ? vizColors.white
+        : props.timeframe === "DMY, YMD"
+        ? vizColors.brightGreen
+        : props.timeframe === "YMD"
+        ? vizColors.neonSeaFoam
+        : props.timeframe === "MDY, YMD"
+        ? vizColors.pink
+        : props.timeframe === "DMY, MDY"
+        ? vizColors.yellow
+        : props.timeframe === "MDY, YMD, DMY"
+        ? vizColors.pastelPurple
         : fontColor};
   }
 `;
