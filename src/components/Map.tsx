@@ -23,7 +23,7 @@ import {
 
 import topology from "../data/world-topo.json";
 import dateData from "../data/dateData.json";
-import { defaultDateFormatter } from "./utils";
+import { dateColors, defaultDateFormatter } from "./utils";
 
 export type GeoCustomProps = {
   width: number;
@@ -83,18 +83,6 @@ const world = topojson.feature(topology, topology.objects.units) as {
   features: FeatureShape[];
 };
 
-const dateColors = scaleOrdinal({
-  domain: ["DMY", "DMY, YMD", "YMD", "MDY, YMD, DMY", "MDY, YMD", "DMY, MDY"],
-  range: [
-    vizColors.adamantineBlue,
-    vizColors.brightGreen,
-    vizColors.neonSeaFoam,
-    vizColors.pastelPurple,
-    vizColors.pink,
-    vizColors.yellow,
-  ],
-});
-
 export default withTooltip<GeoCustomProps, TooltipData>(
   ({
     width,
@@ -107,10 +95,12 @@ export default withTooltip<GeoCustomProps, TooltipData>(
     showTooltip,
   }: GeoCustomProps & WithTooltipProvidedProps<TooltipData>) => {
     // ?? why is this a state we are not planning on changing it
-    const [projection, setProjection] = useState<keyof typeof PROJECTIONS>(
-      "geoInterruptedMollweideHemispheres"
-    );
-    const [countryTime, setCountryTime] = useState<DateTime>(DateTime.now());
+    // const [projection, setProjection] = useState<keyof typeof PROJECTIONS>(
+    //   "geoInterruptedMollweideHemispheres"
+    // );
+
+    const projection = "geoInterruptedMollweideHemispheres";
+    // const [countryTime, setCountryTime] = useState<DateTime>(DateTime.now());
 
     // event handlers
     const handleMouseMove = useCallback(

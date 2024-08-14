@@ -1,6 +1,13 @@
 /* eslint-disable import/prefer-default-export */
 import styled from "styled-components";
-import { fontSize, maxWidth } from "./stylingConstants";
+import {
+  fontColor,
+  fontFamily,
+  fontSize,
+  fontWeight,
+  maxWidth,
+  vizColors,
+} from "./stylingConstants";
 
 export const BaseText = styled.div`
   font-family: "Roboto Mono";
@@ -15,6 +22,28 @@ export const HeroTextWrapper = styled.div`
 `;
 
 export const NoteText = styled.p`
-  color: gray;
-  line-height: 130%;
+  color: ${fontColor};
+  line-height: 28px;
+  span {
+    font-weight: ${fontWeight.semibold};
+  }
+`;
+
+export const TimezoneButton = styled.button`
+  background-color: #fff; /* Pale Purple */
+  border: 1px solid ${fontColor};
+  font-family: "Roboto Mono";
+  color: ${fontColor};
+  padding: 4px 8px;
+  margin: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: ${fontSize.small};
+  cursor: pointer;
+
+  :hover {
+    background-color: ${fontColor};
+    color: #fff;
+  }
 `;

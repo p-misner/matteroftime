@@ -32,7 +32,7 @@ export const TooltipDiv = styled.div`
     font-weight: ${fontWeight.semibold};
 
     span {
-      font-weight: ${fontWeight.regular};
+      // font-weight: ${fontWeight};
       font-family: ${fontFamily.sanserif};
       font-size: ${fontSize.regular};
     }
@@ -64,7 +64,6 @@ export const TimeDiv = styled.div<TimeDivInputs>`
   h3 {
     font-family: ${fontFamily.sanserif};
     font-size: ${fontSize.small};
-    font-weight: ${fontWeight.regular};
     color: ${(props) =>
       props.timeframe === "DMY"
         ? vizColors.adamantineBlue
@@ -83,7 +82,6 @@ export const TimeDiv = styled.div<TimeDivInputs>`
   h2 {
     font-family: ${fontFamily.sanserif};
     font-size: ${fontSize.large};
-    font-weight: ${fontWeight.regular};
     text-decoration: underline;
     text-decoration-thickness: 6px;
     text-underline-offset: 4px;

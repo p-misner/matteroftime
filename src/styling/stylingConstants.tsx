@@ -3,7 +3,7 @@ import React from "react";
 
 export const tabletBreakpoint = "768px";
 export const mobileBreakpoint = "480px";
-export const maxWidth = "1170px";
+export const maxWidth = "1024px";
 // export const h2 = "24px";
 export const heroText = "32px";
 
@@ -25,7 +25,13 @@ export const fontFamily = {
 
 export const fontWeight = {
   semibold: 600,
-  regular: 400,
+};
+export const spacingBlocks = {
+  xsmall: "4px",
+  small: "8px",
+  normal: "16px",
+  medium: "24px",
+  large: "48px",
 };
 
 export type HEX = `#${string}`;
@@ -36,7 +42,6 @@ export const vizColors: {
   pastelPurple: HEX;
   pink: HEX;
   neonSeaFoam: HEX;
-  white: HEX;
 } = {
   yellow: "#F9D147",
   brightGreen: "#9BE400",
@@ -44,5 +49,4 @@ export const vizColors: {
   pastelPurple: "#9980FA",
   pink: "#FA80D8",
   neonSeaFoam: "#1ADB9A",
-  white: "#ffffff",
 };

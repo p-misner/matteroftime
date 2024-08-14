@@ -12,6 +12,7 @@ import {
   BaseText,
   HeroTextWrapper,
   NoteText,
+  TimezoneButton,
 } from "../styling/descriptiveTextStyle";
 import TextTooltip from "./Tooltips";
 import { dayNumberofWeek, defaultDateFormatter, isWeekend } from "./utils";
@@ -47,8 +48,6 @@ export default function OverviewText() {
     getCountriesForTimezone(timeZone)[0]?.name
   );
 
-  // end here
-
   const countryCode = countryCodes.filter((x) => x.name == country)[0].code;
   const countryDateDetails = dateData.filter(
     (x) => x.CountryCode == countryCode
@@ -63,7 +62,7 @@ export default function OverviewText() {
     })
     .slice(4);
 
-  // maybe move this into separate funciton vs ternary
+  // maybe move this into separate function vs ternary
   const timeToSecond = time.toLocaleString(
     countryDateDetails.ClockTypeHour == "12hr"
       ? {
@@ -81,7 +80,7 @@ export default function OverviewText() {
 
   const dayofWeek = time.toLocaleString({ weekday: "long" });
 
-  // maybe move this into separate funciton vs ternary
+  // maybe move this into separate function vs ternary
   const formattedDate = time.toFormat(
     countryDateDetails.DateFormatDefault == "None Specified"
       ? defaultDateFormatter(countryDateDetails.DateFormat)
@@ -146,13 +145,19 @@ export default function OverviewText() {
       {allTimeZones?.length > 1 && (
         <NoteText>
           Note: In {country}, there are multiple time zones. Information being
-          displayed is for the &quot;{timeZone}&quot; region. Other timezones
-          include{" "}
-          {allTimeZones?.map((x) => (
-            <button type="button" onClick={() => setTimezone(x)} key={x}>
-              {x}{" "}
-            </button>
-          ))}
+          displayed is for the <span>&quot;{timeZone}&quot;</span> region. Other
+          timezones include{" "}
+          {allTimeZones
+            ?.filter((x) => x !== timeZone)
+            .map((x) => (
+              <TimezoneButton
+                type="button"
+                onClick={() => setTimezone(x)}
+                key={x}
+              >
+                {x}{" "}
+              </TimezoneButton>
+            ))}
         </NoteText>
       )}
     </HeroTextWrapper>

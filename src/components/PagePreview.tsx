@@ -98,14 +98,16 @@ function PageCard({
   title,
   bodyCopy,
   color,
+  link,
 }: {
   title: string;
   bodyCopy: string;
   color: string;
+  link: string;
 }) {
   return (
     <PageCardWrapper>
-      <UnStyledLink href="/dateformat">
+      <UnStyledLink href={link}>
         <h3>{title} →</h3>
       </UnStyledLink>
       <p>{bodyCopy}</p>
@@ -123,26 +125,31 @@ export default function PagePreview() {
         title="Date Formats"
         bodyCopy={placeholderCopy + placeholderCopy}
         color={vizColors.yellow}
+        link="/dateformat"
       />
       <PageCard
         title="Second"
         bodyCopy={placeholderCopy}
         color={vizColors.adamantineBlue}
+        link="/dateformat"
       />
       <PageCard
         title="Third"
         bodyCopy={placeholderCopy}
         color={vizColors.brightGreen}
+        link="/dateformat"
       />
       <PageCard
         title="Date Another"
         bodyCopy={placeholderCopy}
         color={vizColors.pastelPurple}
+        link="/dateformat"
       />
       <PageCard
         title="Fourth Formats"
         bodyCopy={placeholderCopy}
         color={vizColors.adamantineBlue}
+        link="/dateformat"
       />
       <MarginPageCard />
     </CardHorizontal>

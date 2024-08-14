@@ -1,3 +1,6 @@
+import { scaleOrdinal } from "@visx/scale";
+import { vizColors } from "../styling/stylingConstants";
+
 export function defaultDateFormatter(order: string) {
   const firstThree = order.slice(0, 3);
   switch (firstThree) {
@@ -95,3 +98,15 @@ export function dayNumberofWeek({
       return "error";
   }
 }
+
+export const dateColors = scaleOrdinal({
+  domain: ["DMY", "DMY, YMD", "YMD", "MDY, YMD, DMY", "MDY, YMD", "DMY, MDY"],
+  range: [
+    vizColors.adamantineBlue,
+    vizColors.brightGreen,
+    vizColors.neonSeaFoam,
+    vizColors.pastelPurple,
+    vizColors.pink,
+    vizColors.yellow,
+  ],
+});
