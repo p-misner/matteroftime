@@ -21,10 +21,11 @@ import {
 import { vizColors } from "../src/styling/stylingConstants";
 import { Legend } from "../src/components/Legend";
 import { LegendDataType } from "../src/styling/typeConstants";
-import GeoCustom from "../src/components/Map";
+import Map from "../src/components/Map";
 import { LegendSymbol } from "../src/styling/legendStyle";
 import Table from "../src/components/Table";
-const Blog = () => {
+import PagePreview from "../src/components/PagePreview";
+const DateFormat = () => {
   const DummyData: LegendDataType[] = [
     { symbol: "square", text: "DMY", color: vizColors.adamantineBlue },
     { symbol: "square", text: "DMY/YMD", color: vizColors.brightGreen },
@@ -47,7 +48,7 @@ const Blog = () => {
       </OutlinedWrapper>
       <OutlinedWrapper>
         <Legend legendData={DummyData} />
-        <GeoCustom width={960} height={490} />
+        <Map type="dateformat" width={960} height={490} />
       </OutlinedWrapper>
       <OutlinedWrapper>
         <HeaderH3> Endianness aka Date Order</HeaderH3>
@@ -219,11 +220,8 @@ const Blog = () => {
       </OutlinedWrapper>
       <Table></Table>
 
-      <OutlinedWrapper>
-        <p> navigation</p>
-      </OutlinedWrapper>
-      <Footer />
+      <PagePreview />
     </PageWrapper>
   );
 };
-export default Blog;
+export default DateFormat;

@@ -28,16 +28,15 @@ import { dateColors, defaultDateFormatter } from "./utils";
 export type GeoCustomProps = {
   width: number;
   height: number;
+  type?: string;
   events?: boolean;
 };
-
 interface FeatureShape {
   type: "Feature";
   id: string;
   geometry: { coordinates: [number, number][][]; type: "Polygon" };
   properties: { name: string };
 }
-
 type TooltipData = {
   country: string;
   countryCode: string;
@@ -87,6 +86,7 @@ export default withTooltip<GeoCustomProps, TooltipData>(
   ({
     width,
     height,
+    type,
     tooltipOpen,
     tooltipLeft,
     tooltipTop,
@@ -94,13 +94,7 @@ export default withTooltip<GeoCustomProps, TooltipData>(
     hideTooltip,
     showTooltip,
   }: GeoCustomProps & WithTooltipProvidedProps<TooltipData>) => {
-    // ?? why is this a state we are not planning on changing it
-    // const [projection, setProjection] = useState<keyof typeof PROJECTIONS>(
-    //   "geoInterruptedMollweideHemispheres"
-    // );
-
     const projection = "geoInterruptedMollweideHemispheres";
-    // const [countryTime, setCountryTime] = useState<DateTime>(DateTime.now());
 
     // event handlers
     const handleMouseMove = useCallback(
@@ -167,7 +161,6 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                           }}
                           onMouseEnter={(e) => {
                             //gets time in country at one instant
-
                             // this removes the country and then reappends it to map so that it is at the top of the stack
                             // might need to check it's not just infinitely duplicating itself but for now, good.
                             let target = e.currentTarget;

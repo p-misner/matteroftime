@@ -17,6 +17,11 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["src", "pages/index.tsx", "pages/dateformat.tsx"],
+  "include": [
+    "src",
+    "pages/index.tsx",
+    "pages/dateformat.tsx",
+    "pages/weekdayweekend.tsx"
+  ],
   "exclude": ["node_modules"]
 }

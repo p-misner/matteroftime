@@ -47,3 +47,23 @@ export const TimezoneButton = styled.button`
     color: #fff;
   }
 `;
+
+export const TimezoneBlackButton = styled.button`
+  background-color: #fff;
+  font-family: "Roboto Mono";
+  border: 0px solid ${fontColor};
+  color: ${fontColor};
+  padding: 4px 8px;
+  margin: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: ${fontSize.small};
+  // font-weight: ${fontWeight.semibold};
+  cursor: pointer;
+  opacity: 0.5;
+
+  :hover {
+    opacity: 1;
+  }
+`;

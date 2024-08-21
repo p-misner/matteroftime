@@ -12,6 +12,7 @@ import {
   BaseText,
   HeroTextWrapper,
   NoteText,
+  TimezoneBlackButton,
   TimezoneButton,
 } from "../styling/descriptiveTextStyle";
 import TextTooltip from "./Tooltips";
@@ -47,6 +48,8 @@ export default function OverviewText() {
   const [country, setCountry] = useState<string>(
     getCountriesForTimezone(timeZone)[0]?.name
   );
+
+  const [overflow, setOverflow] = useState<boolean>(true);
 
   const countryCode = countryCodes.filter((x) => x.name == country)[0].code;
   const countryDateDetails = dateData.filter(
@@ -100,8 +103,6 @@ export default function OverviewText() {
   });
 
   const allTimeZones = getTimezonesForCountry(countryCode)?.map((x) => x.name);
-  // console.log(allTimeZones?.map((x) => x.name));
-  //
 
   const listOptions = countryCodes.map((x) => ({
     value: x.name,
@@ -144,11 +145,11 @@ export default function OverviewText() {
 
       {allTimeZones?.length > 1 && (
         <NoteText>
-          Note: In {country}, there are multiple time zones. Information being
-          displayed is for the <span>&quot;{timeZone}&quot;</span> region. Other
-          timezones include{" "}
+          Note: Information being displayed is for the{" "}
+          <span>&quot;{timeZone}&quot;</span> region. Other timezones include{" "}
           {allTimeZones
             ?.filter((x) => x !== timeZone)
+            .filter((x, i) => (overflow ? i < 5 : i >= 0))
             .map((x) => (
               <TimezoneButton
                 type="button"
@@ -158,6 +159,21 @@ export default function OverviewText() {
                 {x}{" "}
               </TimezoneButton>
             ))}
+          {overflow && allTimeZones && allTimeZones.length > 5 ? (
+            <TimezoneBlackButton
+              type="button"
+              onClick={() => setOverflow(false)}
+            >
+              Show More
+            </TimezoneBlackButton>
+          ) : (
+            <TimezoneBlackButton
+              type="button"
+              onClick={() => setOverflow(true)}
+            >
+              Show Less
+            </TimezoneBlackButton>
+          )}
         </NoteText>
       )}
     </HeroTextWrapper>

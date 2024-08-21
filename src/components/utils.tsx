@@ -110,3 +110,13 @@ export const dateColors = scaleOrdinal({
     vizColors.yellow,
   ],
 });
+
+export const workWeekColors = scaleOrdinal({
+  domain: ["MtoF", "MtoSa", "SutoTh", "SutoF"],
+  range: [
+    vizColors.adamantineBlue,
+    vizColors.brightGreen,
+    vizColors.neonSeaFoam,
+    vizColors.pastelPurple,
+  ],
+});
