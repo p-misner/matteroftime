@@ -1,6 +1,11 @@
 /* eslint-disable import/prefer-default-export */
 import styled from "styled-components";
-import { fontColor, fontFamily, fontSize } from "./stylingConstants";
+import {
+  fontColor,
+  fontFamily,
+  fontSize,
+  spacingBlocks,
+} from "./stylingConstants";
 import { LegendDataType, HEX, RGB, RGBA } from "../styling/typeConstants";
 
 export const LegendWrapper = styled.div`
@@ -9,6 +14,7 @@ export const LegendWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: ${spacingBlocks.medium};
 `;
 export const LegendItemWrapper = styled.div`
   display: flex;
@@ -16,7 +22,7 @@ export const LegendItemWrapper = styled.div`
   flex-wrap: no-wrap;
   justify-content: flex-start;
   align-items: center;
-  margin-right: 16px;
+  margin-right: 24px;
 `;
 
 type LegendSymbolType = {

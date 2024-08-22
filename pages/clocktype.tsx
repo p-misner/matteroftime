@@ -8,8 +8,17 @@ import {
 import Header from "../src/components/Header";
 import Map from "../src/components/Map";
 import PagePreview from "../src/components/PagePreview";
+import { vizColors } from "../src/styling/stylingConstants";
+import { LegendDataType } from "../src/styling/typeConstants";
+import { Legend } from "../src/components/Legend";
 
-const FirstDay = () => {
+const ClockType = () => {
+  const ClockTypeLegend: LegendDataType[] = [
+    { symbol: "square", text: "12hr", color: vizColors.adamantineBlue },
+    { symbol: "square", text: "12hr and 24hr", color: vizColors.brightGreen },
+    { symbol: "square", text: "24hr", color: vizColors.pastelPurple },
+    { symbol: "square", text: "24hr (12hr orally)", color: vizColors.yellow },
+  ];
   return (
     <PageWrapper>
       <Header />
@@ -22,6 +31,7 @@ const FirstDay = () => {
         </Subtitle>
       </OutlinedWrapper>
       <OutlinedWrapper>
+        <Legend legendData={ClockTypeLegend} />
         <Map type="clocktype" width={960} height={490} />
       </OutlinedWrapper>
       <PagePreview />
@@ -29,4 +39,4 @@ const FirstDay = () => {
   );
 };
 
-export default FirstDay;
+export default ClockType;

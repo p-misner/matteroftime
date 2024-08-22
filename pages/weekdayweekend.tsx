@@ -8,8 +8,18 @@ import {
 import Header from "../src/components/Header";
 import Map from "../src/components/Map";
 import PagePreview from "../src/components/PagePreview";
+import { LegendDataType } from "../src/styling/typeConstants";
+import { vizColors } from "../src/styling/stylingConstants";
+import { Legend } from "../src/components/Legend";
 
 const WeekdayWeekend = () => {
+  const WeekendWeekdayLegend: LegendDataType[] = [
+    { symbol: "square", text: "M→F", color: vizColors.pastelPurple },
+    { symbol: "square", text: "M→Sa", color: vizColors.adamantineBlue },
+    { symbol: "square", text: "Su→Th", color: vizColors.brightGreen },
+    { symbol: "square", text: "Sa→Th", color: vizColors.pink },
+    { symbol: "square", text: "Sa→W", color: vizColors.neonSeaFoam },
+  ];
   return (
     <PageWrapper>
       <Header />
@@ -22,6 +32,7 @@ const WeekdayWeekend = () => {
         </Subtitle>
       </OutlinedWrapper>
       <OutlinedWrapper>
+        <Legend legendData={WeekendWeekdayLegend} />
         <Map type="weekdayweekend" width={960} height={490} />
       </OutlinedWrapper>
       <PagePreview />

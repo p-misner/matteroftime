@@ -8,8 +8,16 @@ import {
 import Header from "../src/components/Header";
 import Map from "../src/components/Map";
 import PagePreview from "../src/components/PagePreview";
+import { LegendDataType } from "../src/styling/typeConstants";
+import { vizColors } from "../src/styling/stylingConstants";
+import { Legend } from "../src/components/Legend";
 
 const FirstDay = () => {
+  const FirstDayLegend: LegendDataType[] = [
+    { symbol: "square", text: "Monday", color: vizColors.pastelPurple },
+    { symbol: "square", text: "Saturday", color: vizColors.adamantineBlue },
+    { symbol: "square", text: "Sunday", color: vizColors.brightGreen },
+  ];
   return (
     <PageWrapper>
       <Header />
@@ -22,6 +30,7 @@ const FirstDay = () => {
         </Subtitle>
       </OutlinedWrapper>
       <OutlinedWrapper>
+        <Legend legendData={FirstDayLegend} />
         <Map type="firstday" width={960} height={490} />
       </OutlinedWrapper>
       <PagePreview />

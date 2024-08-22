@@ -26,7 +26,7 @@ import { LegendSymbol } from "../src/styling/legendStyle";
 import Table from "../src/components/Table";
 import PagePreview from "../src/components/PagePreview";
 const DateFormat = () => {
-  const DummyData: LegendDataType[] = [
+  const DateFormatLegend: LegendDataType[] = [
     { symbol: "square", text: "DMY", color: vizColors.adamantineBlue },
     { symbol: "square", text: "DMY/YMD", color: vizColors.brightGreen },
     { symbol: "square", text: "YMD", color: vizColors.neonSeaFoam },
@@ -47,7 +47,7 @@ const DateFormat = () => {
         </Subtitle>
       </OutlinedWrapper>
       <OutlinedWrapper>
-        <Legend legendData={DummyData} />
+        <Legend legendData={DateFormatLegend} />
         <Map type="dateformat" width={960} height={490} />
       </OutlinedWrapper>
       <OutlinedWrapper>
