@@ -67,22 +67,22 @@ export default function PagePreview() {
         link="/weekdayweekend"
       />
       <PageCard
-        title="Third"
+        title="First Day of the Week"
         bodyCopy={placeholderCopy}
         color={vizColors.brightGreen}
-        link="/dateformat"
+        link="/firstday"
       />
       <PageCard
-        title="Date Another"
+        title="ClockType"
         bodyCopy={placeholderCopy}
         color={vizColors.pastelPurple}
-        link="/dateformat"
+        link="/clocktype"
       />
       <PageCard
-        title="Fourth Formats"
+        title="Timezones"
         bodyCopy={placeholderCopy}
         color={vizColors.adamantineBlue}
-        link="/dateformat"
+        link="/"
       />
       <MarginPageCard />
     </CardHorizontal>

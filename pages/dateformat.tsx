@@ -216,9 +216,9 @@ const DateFormat = () => {
             </TableRow>
           </TableTable>
         </TableWrapper>
-        <HeaderH3> Table of Selected Countries</HeaderH3>
+        {/* <HeaderH3> Table of Selected Countries</HeaderH3> */}
       </OutlinedWrapper>
-      <Table></Table>
+      {/* <Table></Table> */}
 
       <PagePreview />
     </PageWrapper>

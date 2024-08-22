@@ -112,11 +112,43 @@ export const dateColors = scaleOrdinal({
 });
 
 export const workWeekColors = scaleOrdinal({
-  domain: ["MtoF", "MtoSa", "SutoTh", "SutoF"],
+  domain: [
+    "MtoF",
+    "MtoSa",
+    "SutoTh",
+    "SatoW",
+    "SatoTh",
+    "SutoF",
+    "MtoThandSa",
+    "mixed",
+  ],
   range: [
+    vizColors.pastelPurple,
     vizColors.adamantineBlue,
     vizColors.brightGreen,
     vizColors.neonSeaFoam,
+    vizColors.pink,
+    vizColors.yellow,
+    "red",
+    "#000",
+  ],
+});
+export const firstDayColors = scaleOrdinal({
+  domain: ["Monday", "Saturday", "Sunday", "Friday"],
+  range: [
     vizColors.pastelPurple,
+    vizColors.adamantineBlue,
+    vizColors.brightGreen,
+    vizColors.neonSeaFoam,
+  ],
+});
+
+export const clockTypeColors = scaleOrdinal({
+  domain: ["24hr", "12hr", "Both", "24hr12oral"],
+  range: [
+    vizColors.pastelPurple,
+    vizColors.adamantineBlue,
+    vizColors.brightGreen,
+    vizColors.yellow,
   ],
 });

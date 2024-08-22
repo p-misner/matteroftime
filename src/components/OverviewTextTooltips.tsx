@@ -95,5 +95,3 @@ export default function TextTooltip({
     </TooltipWrapper>
   );
 }
-
-export function MapTooltip() {}

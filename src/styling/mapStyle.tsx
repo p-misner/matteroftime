@@ -40,7 +40,7 @@ export const TooltipDiv = styled.div`
   p {
     font-family: ${fontFamily.mono};
     font-size: ${fontSize.small};
-    padding-top: 16px;
+    padding-top: 8px;
   }
 `;
 
@@ -50,6 +50,19 @@ export const DateWrapper = styled.div`
   flex-wrap: nowrap;
   justify-content: space-around;
   margin: 8px 0px;
+`;
+
+type WorkWeekUnderlineInputs = {
+  workWeekColor?: string;
+  //   color: HEX;
+};
+export const WorkWeekUnderline = styled.span<WorkWeekUnderlineInputs>`
+  font-weight: ${fontWeight.semibold};
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+  text-underline-offset: 4px;
+  text-decoration-color: ${(props) =>
+    props.workWeekColor ? props.workWeekColor : "#000"};
 `;
 
 type TimeDivInputs = {

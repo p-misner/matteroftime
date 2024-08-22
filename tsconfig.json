@@ -21,7 +21,9 @@
     "src",
     "pages/index.tsx",
     "pages/dateformat.tsx",
-    "pages/weekdayweekend.tsx"
+    "pages/weekdayweekend.tsx",
+    "pages/firstday.tsx",
+    "pages/clocktype.tsx"
   ],
   "exclude": ["node_modules"]
 }

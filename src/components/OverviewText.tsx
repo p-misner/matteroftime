@@ -15,7 +15,7 @@ import {
   TimezoneBlackButton,
   TimezoneButton,
 } from "../styling/descriptiveTextStyle";
-import TextTooltip from "./Tooltips";
+import TextTooltip from "./OverviewTextTooltips";
 import { dayNumberofWeek, defaultDateFormatter, isWeekend } from "./utils";
 
 function BoldedText({ text }: { text: string }) {
@@ -143,7 +143,7 @@ export default function OverviewText() {
         <BoldedText text={typeOfDay} />.
       </BaseText>
 
-      {allTimeZones?.length > 1 && (
+      {allTimeZones && allTimeZones?.length > 1 && (
         <NoteText>
           Note: Information being displayed is for the{" "}
           <span>&quot;{timeZone}&quot;</span> region. Other timezones include{" "}
@@ -166,7 +166,7 @@ export default function OverviewText() {
             >
               Show More
             </TimezoneBlackButton>
-          ) : (
+          ) : allTimeZones.length <= 5 ? null : (
             <TimezoneBlackButton
               type="button"
               onClick={() => setOverflow(true)}

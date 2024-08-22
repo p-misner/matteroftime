@@ -1,34 +1,31 @@
 /* eslint-disable react/jsx-handler-names */
 import React, { useState, useCallback, useEffect } from "react";
 import * as topojson from "topojson-client";
-import { scaleQuantize, scaleOrdinal } from "@visx/scale";
 import { CustomProjection, Graticule } from "@visx/geo";
 import { Projection } from "@visx/geo/lib/types";
 import { Zoom } from "@visx/zoom";
 import { geoPath, geoGraticule10 } from "d3-geo";
 
-import { withTooltip, defaultStyles, TooltipWithBounds } from "@visx/tooltip";
+import { withTooltip, TooltipWithBounds } from "@visx/tooltip";
 import { WithTooltipProvidedProps } from "@visx/tooltip/lib/enhancers/withTooltip";
-import { getTimezonesForCountry } from "countries-and-timezones";
-import { DateTime } from "luxon";
 
 import { geoInterruptedMollweideHemispheres } from "d3-geo-projection";
-import { vizColors } from "../styling/stylingConstants";
-import {
-  CountryPathHoverEffect,
-  DateWrapper,
-  TimeDiv,
-  TooltipDiv,
-} from "../styling/mapStyle";
+import { CountryPathHoverEffect } from "../styling/mapStyle";
 
 import topology from "../data/world-topo.json";
 import dateData from "../data/dateData.json";
-import { dateColors, defaultDateFormatter } from "./utils";
+import {
+  clockTypeColors,
+  dateColors,
+  firstDayColors,
+  workWeekColors,
+} from "./utils";
+import { MapTooltipContents, TooltipData, tooltipStyles } from "./MapTooltips";
 
 export type GeoCustomProps = {
   width: number;
   height: number;
-  type?: string;
+  type: string;
   events?: boolean;
 };
 interface FeatureShape {
@@ -36,38 +33,6 @@ interface FeatureShape {
   id: string;
   geometry: { coordinates: [number, number][][]; type: "Polygon" };
   properties: { name: string };
-}
-type TooltipData = {
-  country: string;
-  countryCode: string;
-  dateFormat: string;
-  dateFormatDefault: string;
-  punctuation: string;
-  color: string;
-};
-const tooltipStyles = {
-  ...defaultStyles,
-  backgroundColor: "white",
-  border: "1px solid black",
-};
-
-function TooltipSubtitle(dateFormatString: string) {
-  switch (dateFormatString) {
-    case "DMY":
-      return "This country primarily uses the DMY format for dates or (*) has no date format specified so defaults to the international standard.";
-    case "DMY, YMD":
-      return "This country uses a mix of DMY and YMD formats.";
-    case "YMD":
-      return "This country primarily uses the YMD format for dates.";
-    case "MDY, YMD":
-      return "Primarily using MDY for dates, this country also uses the YMD formats.";
-    case "DMY, MDY":
-      return "This country uses a mix of DMY and MDY formats.";
-    case "MDY, YMD, DMY":
-      return "This country uses a mix of MDY, YMD and DMY formats.";
-    default:
-      return "Multiple Date Formats";
-  }
 }
 
 // same as projection in Observable
@@ -81,6 +46,39 @@ const world = topojson.feature(topology, topology.objects.units) as {
   type: "FeatureCollection";
   features: FeatureShape[];
 };
+
+function mapColorChooser({
+  category,
+  feature,
+}: {
+  category: string;
+  feature: any;
+}) {
+  switch (category) {
+    case "dateformat":
+      return dateColors(
+        dateData.filter((x: any) => x.FullName === feature.properties.name)[0]
+          ?.DateFormat
+      );
+    case "weekdayweekend":
+      return workWeekColors(
+        dateData.filter((x: any) => x.FullName === feature.properties.name)[0]
+          ?.WorkWeek
+      );
+    case "firstday":
+      return firstDayColors(
+        dateData.filter((x: any) => x.FullName === feature.properties.name)[0]
+          ?.FirstDayofWeek
+      );
+    case "clocktype":
+      return clockTypeColors(
+        dateData.filter((x: any) => x.FullName === feature.properties.name)[0]
+          ?.ClockTypeHour
+      );
+    default:
+      return "#fff";
+  }
+}
 
 export default withTooltip<GeoCustomProps, TooltipData>(
   ({
@@ -125,6 +123,7 @@ export default withTooltip<GeoCustomProps, TooltipData>(
         >
           {() => (
             <div>
+              {/* SVG OF THE GLOBE  */}
               <svg viewBox={`0 0 ${width} ${height}`}>
                 <rect x={0} y={0} width={width} height={height} fill="none" />
                 <path
@@ -149,11 +148,10 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                         <CountryPathHoverEffect
                           key={`map-feature-${i}`}
                           d={path || ""}
-                          fill={dateColors(
-                            dateData.filter(
-                              (x) => x.FullName === feature.properties.name
-                            )[0]?.DateFormat
-                          )}
+                          fill={mapColorChooser({
+                            category: type,
+                            feature: feature,
+                          })}
                           onMouseLeave={() => {
                             tooltipTimeout = window.setTimeout(() => {
                               hideTooltip();
@@ -185,6 +183,15 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                               dateFormat: dateData.filter(
                                 (x) => x.FullName === feature.properties.name
                               )[0]?.DateFormat,
+                              workWeek: dateData.filter(
+                                (x) => x.FullName === feature.properties.name
+                              )[0]?.WorkWeek,
+                              firstDay: dateData.filter(
+                                (x) => x.FullName === feature.properties.name
+                              )[0]?.FirstDayofWeek,
+                              clockType: dateData.filter(
+                                (x) => x.FullName === feature.properties.name
+                              )[0]?.ClockTypeHour,
                               color: dateColors(
                                 dateData.filter(
                                   (x) => x.FullName === feature.properties.name
@@ -219,43 +226,16 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                     <use href="#sphere" />
                   </clipPath>
                 </defs>
-                {/** intercept all mouse events */}
               </svg>
+
+              {/*  TOOLTIP ON SVG */}
               {tooltipOpen && tooltipData && (
                 <TooltipWithBounds
                   top={tooltipTop}
                   left={tooltipLeft}
                   style={tooltipStyles}
                 >
-                  <TooltipDiv>
-                    <h3>{tooltipData.country}</h3>
-
-                    <DateWrapper>
-                      <TimeDiv timeframe={tooltipData.dateFormat}>
-                        <h2>
-                          {" "}
-                          {tooltipData &&
-                            tooltipData.dateFormatDefault &&
-                            DateTime.now()
-                              .setZone(
-                                getTimezonesForCountry(
-                                  tooltipData.countryCode
-                                )?.map((x) => x.name)[0]
-                              )
-                              .toFormat(
-                                tooltipData.dateFormatDefault ==
-                                  "None Specified"
-                                  ? defaultDateFormatter(tooltipData.dateFormat)
-                                  : tooltipData.dateFormatDefault
-                              )
-                              .toString()}
-                        </h2>
-                      </TimeDiv>
-                    </DateWrapper>
-                    <div>
-                      <p>{TooltipSubtitle(tooltipData.dateFormat)}</p>
-                    </div>
-                  </TooltipDiv>
+                  {MapTooltipContents({ tooltipData, type })}
                 </TooltipWithBounds>
               )}
             </div>
