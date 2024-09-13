@@ -25878,7 +25878,7 @@
           "arcs": [[549, 550, -151, 551]],
           "type": "Polygon",
           "id": "CZE",
-          "properties": { "name": "Czech Rep." }
+          "properties": { "name": "Czech Republic" }
         },
         {
           "arcs": [
@@ -26116,7 +26116,7 @@
           "arcs": [[[-681, 714, -476]], [[715]]],
           "type": "MultiPolygon",
           "id": "GNQ",
-          "properties": { "name": "Eq. Guinea" }
+          "properties": { "name": "Equatorial Guinea" }
         },
         {
           "arcs": [
@@ -27007,7 +27007,7 @@
           "arcs": [[-591, -1071, 1302, -1018]],
           "type": "Polygon",
           "id": "ESH",
-          "properties": { "name": "W. Sahara" }
+          "properties": { "name": "Western Sahara" }
         },
         {
           "arcs": [

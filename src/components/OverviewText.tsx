@@ -106,7 +106,7 @@ export default function OverviewText() {
 
   const listOptions = countryCodes.map((x) => ({
     value: x.name,
-    label: x.name,
+    label: x.code == "US" ? "USA" : x.name,
   }));
   return (
     <HeroTextWrapper>
@@ -146,7 +146,7 @@ export default function OverviewText() {
       {allTimeZones && allTimeZones?.length > 1 && (
         <NoteText>
           Note: Information being displayed is for the{" "}
-          <span>&quot;{timeZone}&quot;</span> region. Other timezones include{" "}
+          <span>&quot;{timeZone}&quot;</span> region. Other regions include{" "}
           {allTimeZones
             ?.filter((x) => x !== timeZone)
             .filter((x, i) => (overflow ? i < 5 : i >= 0))

@@ -152,3 +152,12 @@ export const clockTypeColors = scaleOrdinal({
     vizColors.yellow,
   ],
 });
+export const daylightSavingsColors = scaleOrdinal({
+  domain: ["north", "south", "past", "never"],
+  range: [
+    vizColors.brightGreen,
+    vizColors.pink,
+    vizColors.adamantineBlue,
+    vizColors.pastelPurple,
+  ],
+});

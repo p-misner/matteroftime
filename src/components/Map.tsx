@@ -17,6 +17,7 @@ import dateData from "../data/dateData.json";
 import {
   clockTypeColors,
   dateColors,
+  daylightSavingsColors,
   firstDayColors,
   workWeekColors,
 } from "./utils";
@@ -74,6 +75,11 @@ function mapColorChooser({
       return clockTypeColors(
         dateData.filter((x: any) => x.FullName === feature.properties.name)[0]
           ?.ClockTypeHour
+      );
+    case "daylightsavings":
+      return daylightSavingsColors(
+        dateData.filter((x: any) => x.FullName === feature.properties.name)[0]
+          ?.DaylightSavings
       );
     default:
       return "#fff";
@@ -192,6 +198,9 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                               clockType: dateData.filter(
                                 (x) => x.FullName === feature.properties.name
                               )[0]?.ClockTypeHour,
+                              daylightSavings: dateData.filter(
+                                (x) => x.FullName === feature.properties.name
+                              )[0]?.DaylightSavings,
                               color: dateColors(
                                 dateData.filter(
                                   (x) => x.FullName === feature.properties.name

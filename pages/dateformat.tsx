@@ -23,7 +23,6 @@ import { Legend } from "../src/components/Legend";
 import { LegendDataType } from "../src/styling/typeConstants";
 import Map from "../src/components/Map";
 import { LegendSymbol } from "../src/styling/legendStyle";
-import Table from "../src/components/Table";
 import PagePreview from "../src/components/PagePreview";
 const DateFormat = () => {
   const DateFormatLegend: LegendDataType[] = [

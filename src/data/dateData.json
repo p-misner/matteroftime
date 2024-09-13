@@ -12,7 +12,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "United Arab Emirates",
@@ -27,7 +27,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Afghanistan",
@@ -37,12 +37,12 @@
     "DateFormatDefault": "d/L/yyyy",
     "DateFormatShort": "d/L/yyyy",
     "DateFormatLong": "yyyy LLLL d",
-    "WorkWeek": "SatoW",
+    "WorkWeek": "SutoTh",
     "FirstDayofWeek": "Saturday",
     "LengthofWeekend": 2,
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Antigua and Barbuda",
@@ -57,7 +57,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Anguilla",
@@ -72,7 +72,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Albania",
@@ -87,7 +87,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Armenia",
@@ -102,7 +102,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Angola",
@@ -117,7 +117,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Antarctica",
@@ -132,7 +132,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Argentina",
@@ -147,7 +147,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Samoa",
@@ -162,7 +162,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Austria",
@@ -177,7 +177,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Australia",
@@ -192,7 +192,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "south"
   },
   {
     "FullName": "Aruba",
@@ -207,7 +207,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Åland Islands",
@@ -222,7 +222,7 @@
     "LengthofWeekend": 2,
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Azerbaijan",
@@ -237,7 +237,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Bosnia and Herzegovina",
@@ -252,7 +252,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Barbados",
@@ -267,7 +267,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Bangladesh",
@@ -282,7 +282,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Belgium",
@@ -297,7 +297,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Burkina Faso",
@@ -312,7 +312,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Bulgaria",
@@ -327,7 +327,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Bahrain",
@@ -342,7 +342,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Burundi",
@@ -357,7 +357,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Benin",
@@ -372,7 +372,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Saint Barthélemy",
@@ -387,7 +387,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Bermuda",
@@ -402,7 +402,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Brunei",
@@ -417,7 +417,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Bolivia",
@@ -432,7 +432,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Caribbean Netherlands",
@@ -447,7 +447,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Brazil",
@@ -462,7 +462,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Bahamas",
@@ -477,7 +477,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Bhutan",
@@ -492,7 +492,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Botswana",
@@ -507,7 +507,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Belarus",
@@ -522,7 +522,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Belize",
@@ -537,7 +537,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Canada",
@@ -552,7 +552,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Cocos Islands",
@@ -567,7 +567,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Democratic Republic of the Congo",
@@ -582,7 +582,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Central African Republic",
@@ -597,7 +597,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Republic of the Congo",
@@ -612,7 +612,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Switzerland",
@@ -627,7 +627,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Ivory Coast",
@@ -642,7 +642,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Cook Islands",
@@ -657,7 +657,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Chile",
@@ -672,7 +672,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "south"
   },
   {
     "FullName": "Cameroon",
@@ -687,7 +687,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "China",
@@ -702,7 +702,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Colombia",
@@ -717,7 +717,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Costa Rica",
@@ -732,7 +732,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Cuba",
@@ -747,7 +747,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Cape Verde",
@@ -762,7 +762,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Curaçao",
@@ -777,7 +777,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Christmas Island",
@@ -792,7 +792,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Cyprus",
@@ -807,7 +807,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Czechia",
@@ -822,7 +822,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Germany",
@@ -837,7 +837,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Djibouti",
@@ -852,7 +852,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Denmark",
@@ -867,7 +867,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Dominica",
@@ -882,7 +882,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Dominican Republic",
@@ -897,7 +897,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Algeria",
@@ -912,7 +912,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Ecuador",
@@ -927,7 +927,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Estonia",
@@ -942,7 +942,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Egypt",
@@ -957,7 +957,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Western Sahara",
@@ -972,7 +972,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Eritrea",
@@ -987,7 +987,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Spain",
@@ -1002,7 +1002,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Ethiopia",
@@ -1017,7 +1017,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Finland",
@@ -1032,7 +1032,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Fiji",
@@ -1047,7 +1047,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Falkland Islands",
@@ -1062,7 +1062,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Micronesia",
@@ -1077,7 +1077,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Faroe Islands",
@@ -1092,7 +1092,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "France",
@@ -1107,7 +1107,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Gabon",
@@ -1122,7 +1122,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "United Kingdom",
@@ -1137,7 +1137,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Grenada",
@@ -1152,7 +1152,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Georgia",
@@ -1167,7 +1167,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "French Guiana",
@@ -1182,7 +1182,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Guernsey",
@@ -1197,7 +1197,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Ghana",
@@ -1212,7 +1212,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Gibraltar",
@@ -1227,7 +1227,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Greenland",
@@ -1242,7 +1242,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Gambia",
@@ -1257,7 +1257,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Guinea",
@@ -1272,7 +1272,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Guadeloupe",
@@ -1287,7 +1287,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Equatorial Guinea",
@@ -1302,7 +1302,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Greece",
@@ -1317,7 +1317,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "South Georgia and the South Sandwich Islands",
@@ -1332,7 +1332,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Guatemala",
@@ -1347,7 +1347,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Guam",
@@ -1362,7 +1362,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Guinea-Bissau",
@@ -1377,7 +1377,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Guyana",
@@ -1392,7 +1392,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Hong Kong",
@@ -1407,7 +1407,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Heard Island and McDonald Islands",
@@ -1422,7 +1422,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Honduras",
@@ -1437,7 +1437,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Croatia",
@@ -1452,7 +1452,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Haiti",
@@ -1467,7 +1467,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Hungary",
@@ -1482,7 +1482,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Indonesia",
@@ -1497,7 +1497,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Ireland",
@@ -1512,7 +1512,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Israel",
@@ -1527,7 +1527,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Isle of Man",
@@ -1542,7 +1542,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "India",
@@ -1557,7 +1557,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "British Indian Ocean Territory",
@@ -1572,7 +1572,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Iraq",
@@ -1587,7 +1587,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Iran",
@@ -1602,7 +1602,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Iceland",
@@ -1617,7 +1617,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Italy",
@@ -1632,7 +1632,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Jersey",
@@ -1647,7 +1647,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Jamaica",
@@ -1662,7 +1662,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Jordan",
@@ -1677,7 +1677,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Japan",
@@ -1692,7 +1692,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Kenya",
@@ -1707,7 +1707,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Kyrgyzstan",
@@ -1722,7 +1722,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Cambodia",
@@ -1737,7 +1737,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Kiribati",
@@ -1752,7 +1752,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Comoros",
@@ -1767,7 +1767,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Saint Kitts and Nevis",
@@ -1782,7 +1782,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "North Korea",
@@ -1797,7 +1797,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "South Korea",
@@ -1812,7 +1812,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Kuwait",
@@ -1827,7 +1827,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Cayman Islands",
@@ -1842,7 +1842,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Kazakhstan",
@@ -1857,7 +1857,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Laos",
@@ -1872,7 +1872,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Lebanon",
@@ -1887,7 +1887,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Saint Lucia",
@@ -1902,7 +1902,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Liechtenstein",
@@ -1917,7 +1917,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Sri Lanka",
@@ -1932,7 +1932,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Liberia",
@@ -1947,7 +1947,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Lesotho",
@@ -1962,7 +1962,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Lithuania",
@@ -1977,7 +1977,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Luxembourg",
@@ -1992,7 +1992,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Latvia",
@@ -2007,7 +2007,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Libya",
@@ -2022,7 +2022,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Morocco",
@@ -2037,7 +2037,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Monaco",
@@ -2052,7 +2052,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Moldova",
@@ -2067,7 +2067,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Montenegro",
@@ -2082,7 +2082,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Saint Martin",
@@ -2097,7 +2097,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Madagascar",
@@ -2112,7 +2112,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Marshall Islands",
@@ -2127,7 +2127,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Macedonia",
@@ -2142,7 +2142,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Mali",
@@ -2157,7 +2157,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Myanmar",
@@ -2172,7 +2172,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Mongolia",
@@ -2187,7 +2187,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Macao",
@@ -2202,7 +2202,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Northern Mariana Islands",
@@ -2217,7 +2217,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Martinique",
@@ -2232,7 +2232,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Mauritania",
@@ -2247,7 +2247,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Montserrat",
@@ -2262,7 +2262,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Malta",
@@ -2277,7 +2277,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Mauritius",
@@ -2292,7 +2292,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Maldives",
@@ -2307,7 +2307,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Malawi",
@@ -2322,7 +2322,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Mexico",
@@ -2337,7 +2337,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Malaysia",
@@ -2352,7 +2352,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Mozambique",
@@ -2367,7 +2367,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Namibia",
@@ -2382,7 +2382,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "New Caledonia",
@@ -2397,7 +2397,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Niger",
@@ -2412,7 +2412,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Norfolk Island",
@@ -2427,7 +2427,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "south"
   },
   {
     "FullName": "Nigeria",
@@ -2442,7 +2442,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Nicaragua",
@@ -2457,7 +2457,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Netherlands",
@@ -2472,7 +2472,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Norway",
@@ -2487,7 +2487,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Nepal",
@@ -2502,7 +2502,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Nauru",
@@ -2517,7 +2517,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Niue",
@@ -2532,7 +2532,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "New Zealand",
@@ -2547,7 +2547,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "south"
   },
   {
     "FullName": "Oman",
@@ -2562,7 +2562,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Panama",
@@ -2577,7 +2577,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Peru",
@@ -2592,7 +2592,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "French Polynesia",
@@ -2607,7 +2607,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Papua New Guinea",
@@ -2622,7 +2622,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Philippines",
@@ -2637,7 +2637,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Pakistan",
@@ -2652,7 +2652,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Poland",
@@ -2667,7 +2667,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Saint Pierre and Miquelon",
@@ -2682,7 +2682,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Pitcairn",
@@ -2697,7 +2697,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Puerto Rico",
@@ -2712,7 +2712,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Palestine",
@@ -2727,7 +2727,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Portugal",
@@ -2742,7 +2742,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Palau",
@@ -2757,7 +2757,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Paraguay",
@@ -2772,7 +2772,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "south"
   },
   {
     "FullName": "Qatar",
@@ -2787,7 +2787,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Réunion",
@@ -2802,7 +2802,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Romania",
@@ -2817,7 +2817,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Serbia",
@@ -2832,7 +2832,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Russia",
@@ -2847,7 +2847,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Rwanda",
@@ -2862,7 +2862,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Saudi Arabia",
@@ -2877,7 +2877,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Solomon Islands",
@@ -2892,7 +2892,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Seychelles",
@@ -2907,7 +2907,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Sudan",
@@ -2922,7 +2922,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Sweden",
@@ -2937,7 +2937,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Singapore",
@@ -2952,7 +2952,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Saint Helena",
@@ -2967,7 +2967,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Slovenia",
@@ -2982,7 +2982,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Svalbard and Jan Mayen",
@@ -2997,7 +2997,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Slovakia",
@@ -3012,7 +3012,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Sierra Leone",
@@ -3027,7 +3027,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "San Marino",
@@ -3042,7 +3042,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Senegal",
@@ -3057,7 +3057,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Somalia",
@@ -3072,7 +3072,22 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
+  },
+  {
+    "FullName": "Somaliland",
+    "CountryCode": "SO",
+    "DateFormat": "DMY, MDY",
+    "Punctuation": "/",
+    "DateFormatDefault": "dd/LL/yyyy",
+    "DateFormatShort": "",
+    "DateFormatLong": "",
+    "WorkWeek": "MtoF",
+    "FirstDayofWeek": "Monday",
+    "LengthofWeekend": "",
+    "ClockTypeHour": "12hr",
+    "NumberTimezones": "",
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Suriname",
@@ -3087,7 +3102,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "South Sudan",
@@ -3102,7 +3117,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Sao Tome and Principe",
@@ -3117,7 +3132,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "El Salvador",
@@ -3132,7 +3147,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Sint Maarten",
@@ -3147,7 +3162,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Syria",
@@ -3162,7 +3177,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Eswatini",
@@ -3177,7 +3192,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Turks and Caicos Islands",
@@ -3192,7 +3207,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Chad",
@@ -3207,7 +3222,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "French Southern Territories",
@@ -3222,7 +3237,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Togo",
@@ -3237,7 +3252,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Thailand",
@@ -3252,7 +3267,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Tajikistan",
@@ -3267,7 +3282,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Tokelau",
@@ -3282,7 +3297,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Timor-Leste",
@@ -3297,7 +3312,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Turkmenistan",
@@ -3312,7 +3327,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Tunisia",
@@ -3327,7 +3342,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Tonga",
@@ -3342,7 +3357,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Turkey",
@@ -3357,7 +3372,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Trinidad and Tobago",
@@ -3372,7 +3387,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Tuvalu",
@@ -3387,7 +3402,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Taiwan",
@@ -3402,7 +3417,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Tanzania",
@@ -3417,7 +3432,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Ukraine",
@@ -3432,7 +3447,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Uganda",
@@ -3447,7 +3462,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "United States Minor Outlying Islands",
@@ -3462,7 +3477,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "United States of America",
@@ -3477,7 +3492,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   },
   {
     "FullName": "Uruguay",
@@ -3492,7 +3507,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Uzbekistan",
@@ -3507,7 +3522,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Holy See",
@@ -3522,7 +3537,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Saint Vincent and the Grenadines",
@@ -3537,7 +3552,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Venezuela",
@@ -3552,7 +3567,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Virgin Islands (UK)",
@@ -3567,7 +3582,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Virgin Islands (US)",
@@ -3582,7 +3597,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Vietnam",
@@ -3597,7 +3612,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Vanuatu",
@@ -3612,7 +3627,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Wallis and Futuna",
@@ -3627,7 +3642,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Samoa",
@@ -3642,7 +3657,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Yemen",
@@ -3657,7 +3672,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "12hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Mayotte",
@@ -3672,7 +3687,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "South Africa",
@@ -3687,7 +3702,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Zambia",
@@ -3702,7 +3717,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Zimbabwe",
@@ -3717,7 +3732,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "East Timor",
@@ -3732,7 +3747,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Kosovo",
@@ -3747,6 +3762,6 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr",
     "NumberTimezones": "",
-    "DaylightSavings": ""
+    "DaylightSavings": "north"
   }
 ]

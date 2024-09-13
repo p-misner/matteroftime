@@ -82,7 +82,7 @@ export default function PagePreview() {
         title="Daylight Savings"
         bodyCopy={placeholderCopy}
         color={vizColors.pink}
-        link="/"
+        link="/daylightsavings"
       />
       <PageCard
         title="Timezones"
