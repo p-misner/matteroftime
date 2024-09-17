@@ -51,7 +51,7 @@ export default function OverviewText() {
 
   const [overflow, setOverflow] = useState<boolean>(true);
 
-  const countryCode = countryCodes.filter((x) => x.name == country)[0].code;
+  const countryCode = countryCodes.filter((x) => x.name == country)[0]?.code;
   const countryDateDetails = dateData.filter(
     (x) => x.CountryCode == countryCode
   )[0];
@@ -136,7 +136,7 @@ export default function OverviewText() {
           }}
           onChange={(e) => {
             if (e) {
-              const cc = countryCodes.filter((x) => x.name == e.value)[0].code;
+              const cc = countryCodes.filter((x) => x.name == e.value)[0]?.code;
               setTimezone(getTimezonesForCountry(cc)![0].name);
 
               setCountry(e.value);
