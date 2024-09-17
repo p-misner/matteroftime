@@ -182,6 +182,13 @@ export default function OverviewText() {
           )}
         </NoteText>
       )}
+
+      {countryDateDetails.DateFormatDefault.includes("None") && (
+        <NoteText>
+          * date format not specifically stated, defaults to international
+          standard
+        </NoteText>
+      )}
     </HeroTextWrapper>
   );
 }
