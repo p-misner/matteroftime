@@ -49,7 +49,7 @@ export default function OverviewText() {
   );
 
   const [overflow, setOverflow] = useState<boolean>(true);
-
+  const [formattedDate, setFormattedDate] = useState<string>("-");
   const countryCode = countryCodes.filter((x) => x.name == country)[0]?.code;
   const countryDateDetails = dateData.filter(
     (x) => x.CountryCode == countryCode
@@ -88,6 +88,17 @@ export default function OverviewText() {
   //     ? defaultDateFormatter(countryDateDetails?.DateFormat)
   //     : countryDateDetails?.DateFormatDefault
   // );
+
+  // let formattedDate = "holder";
+  useEffect(() => {
+    setFormattedDate(
+      time?.toFormat(
+        countryDateDetails?.DateFormatDefault == "None Specified"
+          ? defaultDateFormatter(countryDateDetails?.DateFormat)
+          : countryDateDetails?.DateFormatDefault
+      )
+    );
+  }, [time]);
 
   const typeOfDay = isWeekend({
     dayofWeek: dayofWeek,
@@ -141,9 +152,9 @@ export default function OverviewText() {
             }
           }}
         />
-        {/* , the date is <BoldedText text={formattedDate} link={"/dateformat"} />. */}
-        it is currently <BoldedText text={timeToSecond} link={"/clocktype"} />{" "}
-        on {dayofWeek} in{" "}
+        , the date is <BoldedText text={formattedDate} link={"/dateformat"} />.
+        Currently <BoldedText text={timeToSecond} link={"/clocktype"} /> on{" "}
+        {dayofWeek} in{" "}
         <BoldedText
           text={timeZoneLong || "none detected"}
           link={"/daylightsavings"}
