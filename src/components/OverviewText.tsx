@@ -83,11 +83,13 @@ export default function OverviewText() {
   const dayofWeek = time.toLocaleString({ weekday: "long" });
 
   // maybe move this into separate function vs ternary
-  // const formattedDate = time.toFormat(
-  //   countryDateDetails?.DateFormatDefault == "None Specified"
-  //     ? defaultDateFormatter(countryDateDetails?.DateFormat)
-  //     : countryDateDetails?.DateFormatDefault
-  // );
+  const formattedDate = time
+    ? time!.toFormat(
+        countryDateDetails?.DateFormatDefault == "None Specified"
+          ? defaultDateFormatter(countryDateDetails?.DateFormat)
+          : countryDateDetails?.DateFormatDefault
+      )
+    : "none";
 
   const typeOfDay = isWeekend({
     dayofWeek: dayofWeek,
@@ -141,7 +143,7 @@ export default function OverviewText() {
             }
           }}
         />
-        {/* , the date is <BoldedText text={formattedDate} link={"/dateformat"} />. */}
+        , the date is <BoldedText text={formattedDate} link={"/dateformat"} />.
         Currently <BoldedText text={timeToSecond} link={"/clocktype"} /> on{" "}
         {dayofWeek} in{" "}
         <BoldedText
