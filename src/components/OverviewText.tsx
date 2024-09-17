@@ -67,7 +67,7 @@ export default function OverviewText() {
 
   // maybe move this into separate function vs ternary
   const timeToSecond = time.toLocaleString(
-    countryDateDetails.ClockTypeHour == "12hr"
+    countryDateDetails?.ClockTypeHour == "12hr"
       ? {
           hour: "numeric",
           minute: "2-digit",
