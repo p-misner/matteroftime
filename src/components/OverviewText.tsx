@@ -143,9 +143,9 @@ export default function OverviewText() {
             }
           }}
         />
-        , the date is <BoldedText text={formattedDate} link={"/dateformat"} />.
-        Currently <BoldedText text={timeToSecond} link={"/clocktype"} /> on{" "}
-        {dayofWeek} in{" "}
+        , the date is now{" "}
+        <BoldedText text={formattedDate} link={"/dateformat"} />. Currently{" "}
+        <BoldedText text={timeToSecond} link={"/clocktype"} /> on {dayofWeek} in{" "}
         <BoldedText
           text={timeZoneLong || "none detected"}
           link={"/daylightsavings"}
