@@ -17,7 +17,6 @@ import {
 } from "../styling/descriptiveTextStyle";
 import TextTooltip from "./OverviewTextTooltips";
 import { dayNumberofWeek, defaultDateFormatter, isWeekend } from "./utils";
-import { mobileBreakpoint } from "../styling/stylingConstants";
 
 function BoldedText({ text, link }: { text: string; link: string }) {
   return (
@@ -110,7 +109,7 @@ export default function OverviewText() {
   }));
   return (
     <HeroTextWrapper>
-      {/* <BaseText>
+      <BaseText>
         In{" "}
         <Select
           styles={{
@@ -152,7 +151,7 @@ export default function OverviewText() {
         />
         , it is the <BoldedText text={dayNumber} link={"/firstday"} /> day of
         the week and a <BoldedText text={typeOfDay} link={"/weekdayweekend"} />.
-      </BaseText> */}
+      </BaseText>
 
       {countryDateDetails?.DateFormatDefault.includes("None") && (
         <NoteText>
