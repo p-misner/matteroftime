@@ -1,15 +1,21 @@
 import React from "react";
-import { defaultStyles, TooltipWithBounds } from "@visx/tooltip";
+import { defaultStyles } from "@visx/tooltip";
 import {
   DateWrapper,
   TimeDiv,
   TooltipDiv,
   WorkWeekUnderline,
 } from "../styling/mapStyle";
-import { defaultDateFormatter, firstDayColors, workWeekColors } from "./utils";
+import {
+  clockTypeColors,
+  dateColors,
+  daylightSavingsColors,
+  defaultDateFormatter,
+  firstDayColors,
+  workWeekColors,
+} from "./utils";
 import { getTimezonesForCountry } from "countries-and-timezones";
 import { DateTime } from "luxon";
-import { StringLike } from "@visx/scale";
 
 export type TooltipData = {
   country: string;
@@ -21,11 +27,13 @@ export type TooltipData = {
   workWeek: string;
   firstDay: string;
   clockType: string;
+  daylightSavings: string;
 };
 export const tooltipStyles = {
   ...defaultStyles,
   backgroundColor: "white",
   border: "1px solid black",
+  paddingBottom: "16px",
 };
 export function dateFormatSubtitle(dateFormatString: string) {
   switch (dateFormatString) {
@@ -66,6 +74,20 @@ export function workWeekSubtitle(workWeekString: string) {
       return "Multiple Date Formats";
   }
 }
+export function clockTypeSubtitle(workWeekString: string) {
+  switch (workWeekString) {
+    case "12hr":
+      return "12 hour";
+    case "24hr":
+      return "24 hour";
+    case "Both":
+      return "12hr and 24hr";
+    case "24hr12oral":
+      return "24 hour (12hr orally)";
+    default:
+      return "Other";
+  }
+}
 export function firstDaySubtitle(workWeekString: string) {
   switch (workWeekString) {
     case "MtoF":
@@ -84,6 +106,21 @@ export function firstDaySubtitle(workWeekString: string) {
       return "Monday to Thursday plus Saturday";
     default:
       return "Multiple Date Formats";
+  }
+}
+export function daylightSavingsSubtitle(workWeekString: string) {
+  switch (workWeekString) {
+    case "north":
+      return "Northern Hemisphere summer";
+    case "south":
+      return "Southern Hemisphere summer";
+    case "past":
+      return "formerly";
+    case "never":
+      return "never";
+
+    default:
+      return "other";
   }
 }
 
@@ -121,7 +158,7 @@ export function MapTooltipContents({
 
       {type === "dateformat" && (
         <DateWrapper>
-          <TimeDiv timeframe={tooltipData.dateFormat}>
+          <TimeDiv color={dateColors(tooltipData.dateFormat)}>
             <h2>
               {" "}
               {tooltipData &&
@@ -139,13 +176,52 @@ export function MapTooltipContents({
                   )
                   .toString()}
             </h2>
+            <p> {dateFormatSubtitle(tooltipData.dateFormat)}</p>
           </TimeDiv>
         </DateWrapper>
       )}
 
-      {type === "dateformat" && (
+      {type === "clocktype" && (
         <div>
-          <p>{dateFormatSubtitle(tooltipData.dateFormat)}</p>
+          <p>
+            {" "}
+            Follows a{" "}
+            <WorkWeekUnderline
+              workWeekColor={clockTypeColors(tooltipData.clockType)}
+            >
+              {clockTypeSubtitle(tooltipData.clockType)}
+            </WorkWeekUnderline>{" "}
+            clock{" "}
+          </p>
+        </div>
+      )}
+      {type === "daylightsavings" && (
+        <div>
+          {tooltipData.daylightSavings == "never" ||
+          tooltipData.daylightSavings == "past" ? (
+            <p>
+              Daylight savings has{" "}
+              <WorkWeekUnderline
+                workWeekColor={daylightSavingsColors(
+                  tooltipData.daylightSavings
+                )}
+              >
+                {daylightSavingsSubtitle(tooltipData.daylightSavings)}
+              </WorkWeekUnderline>{" "}
+              been observed
+            </p>
+          ) : (
+            <p>
+              Daylight savings is observed during{" "}
+              <WorkWeekUnderline
+                workWeekColor={daylightSavingsColors(
+                  tooltipData.daylightSavings
+                )}
+              >
+                {daylightSavingsSubtitle(tooltipData.daylightSavings)}
+              </WorkWeekUnderline>{" "}
+            </p>
+          )}
         </div>
       )}
     </TooltipDiv>

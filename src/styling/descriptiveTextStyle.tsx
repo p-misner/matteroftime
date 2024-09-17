@@ -10,7 +10,7 @@ import {
 } from "./stylingConstants";
 
 export const BaseText = styled.div`
-  font-family: "Roboto Mono";
+  font-family: ${fontFamily.mono};
   font-size: ${fontSize.xlarge};
   font-weight: 400;
   line-height: 80px;
@@ -19,6 +19,9 @@ export const BaseText = styled.div`
 export const HeroTextWrapper = styled.div`
   max-width: ${maxWidth};
   margin: 64px auto;
+  @media screen and (max-width: calc(${maxWidth} + 64px)) {
+    padding: 0px 32px;
+  }
 `;
 
 export const NoteText = styled.p`
@@ -32,7 +35,7 @@ export const NoteText = styled.p`
 export const TimezoneButton = styled.button`
   background-color: #fff; /* Pale Purple */
   border: 1px solid ${fontColor};
-  font-family: "Roboto Mono";
+  font-family: ${fontFamily.mono};
   color: ${fontColor};
   padding: 4px 8px;
   margin: 2px;
@@ -50,7 +53,7 @@ export const TimezoneButton = styled.button`
 
 export const TimezoneBlackButton = styled.button`
   background-color: #fff;
-  font-family: "Roboto Mono";
+  font-family: ${fontFamily.mono};
   border: 0px solid ${fontColor};
   color: ${fontColor};
   padding: 4px 8px;

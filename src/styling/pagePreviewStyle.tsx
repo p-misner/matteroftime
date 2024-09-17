@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { fontColor, maxWidth, mobileBreakpoint } from "./stylingConstants";
+import {
+  fontColor,
+  fontFamily,
+  maxWidth,
+  mobileBreakpoint,
+} from "./stylingConstants";
 
 // TYPES
 export type ImageSizes = "big" | "small";
@@ -24,12 +29,12 @@ export const PageCardWrapper = styled.div`
     border-left: 0px;
     @media only screen and (min-width: ${maxWidth}) {
       border-left: 2px solid ${fontColor};
-      margin-left: calc(50vw - 548px);
+      margin-left: calc(50vw - 554px);
     }
   }
 
   h3 {
-    font-family: Outfit;
+    font-family: ${fontFamily.sanserif};
     font-weight: 500;
     font-size: 24px;
     margin: 16px;
@@ -39,6 +44,7 @@ export const PageCardWrapper = styled.div`
   }
   p {
     display: none;
+    line-height: 1.3;
     @media only screen and (min-width: ${mobileBreakpoint}) {
       margin: 24px;
       display: block;
@@ -75,8 +81,13 @@ export const CardHorizontal = styled.div`
   display: flex;
   flex-direction: column;
   border: 2px solid ${fontColor};
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   @media only screen and (min-width: ${mobileBreakpoint}) {
     flex-direction: row;
     max-height: 446px;
+  }
+  ::-webkit-scrollbar {
+    display: none;
   }
 `;

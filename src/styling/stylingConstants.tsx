@@ -2,9 +2,8 @@
 import React from "react";
 
 export const tabletBreakpoint = "768px";
-export const mobileBreakpoint = "480px";
+export const mobileBreakpoint = "580px";
 export const maxWidth = "1024px";
-// export const h2 = "24px";
 export const heroText = "32px";
 
 /* Colors */
@@ -19,8 +18,8 @@ export const fontSize = {
 };
 
 export const fontFamily = {
-  sanserif: "Outfit",
-  mono: "Roboto Mono",
+  sanserif: "Outfit, Helvetica, san-serif",
+  mono: "Roboto Mono, monospace",
 };
 
 export const fontWeight = {

@@ -30,13 +30,14 @@ export const TooltipDiv = styled.div`
     font-family: ${fontFamily.sanserif};
     font-size: ${fontSize.regular};
     font-weight: ${fontWeight.semibold};
-
-    span {
-      // font-weight: ${fontWeight};
-      font-family: ${fontFamily.sanserif};
-      font-size: ${fontSize.regular};
-    }
   }
+  span {
+    font-family: ${fontFamily.sanserif};
+    font-size: ${fontSize.small};
+    letter-spacing: 1px;
+    word-spacing: 2px;
+  }
+
   p {
     font-family: ${fontFamily.mono};
     font-size: ${fontSize.small};
@@ -66,8 +67,8 @@ export const WorkWeekUnderline = styled.span<WorkWeekUnderlineInputs>`
 `;
 
 type TimeDivInputs = {
-  timeframe: string;
-  //   color: HEX;
+  // timeframe: string;
+  color: HEX;
 };
 export const TimeDiv = styled.div<TimeDivInputs>`
   display: flex;
@@ -77,20 +78,7 @@ export const TimeDiv = styled.div<TimeDivInputs>`
   h3 {
     font-family: ${fontFamily.sanserif};
     font-size: ${fontSize.small};
-    color: ${(props) =>
-      props.timeframe === "DMY"
-        ? vizColors.adamantineBlue
-        : props.timeframe === "DMY, YMD"
-        ? vizColors.brightGreen
-        : props.timeframe === "YMD"
-        ? vizColors.neonSeaFoam
-        : props.timeframe === "MDY/YMD"
-        ? vizColors.pink
-        : props.timeframe === "DMY/MDY"
-        ? vizColors.yellow
-        : props.timeframe === "MDY/YMD/DMY"
-        ? vizColors.pastelPurple
-        : fontColor};
+    color: ${fontColor};
   }
   h2 {
     font-family: ${fontFamily.sanserif};
@@ -99,18 +87,10 @@ export const TimeDiv = styled.div<TimeDivInputs>`
     text-decoration-thickness: 6px;
     text-underline-offset: 4px;
     text-decoration-color: ${(props) =>
-      props.timeframe === "DMY"
-        ? vizColors.adamantineBlue
-        : props.timeframe === "DMY, YMD"
-        ? vizColors.brightGreen
-        : props.timeframe === "YMD"
-        ? vizColors.neonSeaFoam
-        : props.timeframe === "MDY, YMD"
-        ? vizColors.pink
-        : props.timeframe === "DMY, MDY"
-        ? vizColors.yellow
-        : props.timeframe === "MDY, YMD, DMY"
-        ? vizColors.pastelPurple
-        : fontColor};
+      props.color ? props.color : fontColor};
+  }
+  p {
+    margin-top: 16px;
+    text-align: left;
   }
 `;

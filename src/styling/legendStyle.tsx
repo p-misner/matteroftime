@@ -23,6 +23,7 @@ export const LegendItemWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin-right: 24px;
+  margin-top: 8px;
 `;
 
 type LegendSymbolType = {

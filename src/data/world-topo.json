@@ -25512,7 +25512,7 @@
           "arcs": [[201, 202, 203, 204, 205]],
           "type": "Polygon",
           "id": "BIH",
-          "properties": { "name": "Bosnia and Herz." }
+          "properties": { "name": "Bosnia and Herzegovina" }
         },
         {
           "arcs": [[206, 207, 208, 209, 210]],
@@ -25922,7 +25922,7 @@
           "arcs": [[[579, 580, 581, 582, 583, 584]]],
           "type": "MultiPolygon",
           "id": "DOM",
-          "properties": { "name": "Dominican Rep." }
+          "properties": { "name": "Dominican Republic" }
         },
         {
           "arcs": [[585, 586, 587, 588, 589, 590, 591, 592]],

@@ -102,35 +102,27 @@ export function dayNumberofWeek({
 export const dateColors = scaleOrdinal({
   domain: ["DMY", "DMY, YMD", "YMD", "MDY, YMD, DMY", "MDY, YMD", "DMY, MDY"],
   range: [
-    vizColors.adamantineBlue,
     vizColors.brightGreen,
-    vizColors.neonSeaFoam,
     vizColors.pastelPurple,
-    vizColors.pink,
+
     vizColors.yellow,
+    vizColors.neonSeaFoam,
+
+    vizColors.adamantineBlue,
+    vizColors.pink,
   ],
 });
 
 export const workWeekColors = scaleOrdinal({
-  domain: [
-    "MtoF",
-    "MtoSa",
-    "SutoTh",
-    "SatoW",
-    "SatoTh",
-    "SutoF",
-    "MtoThandSa",
-    "mixed",
-  ],
+  domain: ["MtoF", "MtoSa", "SutoTh", "SatoTh", "SutoF", "MtoThandSa", "mixed"],
   range: [
     vizColors.pastelPurple,
     vizColors.adamantineBlue,
     vizColors.brightGreen,
-    vizColors.neonSeaFoam,
-    vizColors.pink,
     vizColors.yellow,
-    "red",
+    vizColors.pink,
     "#000",
+    vizColors.neonSeaFoam,
   ],
 });
 export const firstDayColors = scaleOrdinal({
@@ -161,3 +153,20 @@ export const daylightSavingsColors = scaleOrdinal({
     vizColors.pastelPurple,
   ],
 });
+
+export function SummaryCopy({ type }: { type: string }) {
+  switch (type) {
+    case "/dateformat":
+      return " Countries around the world differ in how they write today’s date. Month first? Day first? Periods vs. dashes vs. slashes—everyone does it a little differently.";
+    case "/weekdayweekend":
+      return "The concept of weekdays and weekends isn't universal. While many countries follow a Monday-to-Friday workweek, others observe different days off based on cultural or religious traditions.";
+    case "/daylightsavings":
+      return " Not all countries observe Daylight Saving Time, and those that do might change their clocks at different times of the year—or not at all.";
+    case "/firstday":
+      return " The starting day of the week varies globally, with some regions beginning on Sunday and others on Monday or Saturday.";
+    case "/clocktype":
+      return "From 12-hour clocks to 24-hour military time, different regions use various clock formats. Certain countries even use one format orally and the other in written communication.";
+    default:
+      return "empty";
+  }
+}

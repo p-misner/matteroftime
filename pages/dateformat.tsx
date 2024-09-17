@@ -24,26 +24,22 @@ import { LegendDataType } from "../src/styling/typeConstants";
 import Map from "../src/components/Map";
 import { LegendSymbol } from "../src/styling/legendStyle";
 import PagePreview from "../src/components/PagePreview";
+import { SummaryCopy } from "../src/components/utils";
 const DateFormat = () => {
   const DateFormatLegend: LegendDataType[] = [
-    { symbol: "square", text: "DMY", color: vizColors.adamantineBlue },
-    { symbol: "square", text: "DMY/YMD", color: vizColors.brightGreen },
-    { symbol: "square", text: "YMD", color: vizColors.neonSeaFoam },
-    { symbol: "square", text: "MDY/YMD", color: vizColors.pink },
-    { symbol: "square", text: "DMY/MDY", color: vizColors.yellow },
-    { symbol: "square", text: "MDY/YMD/DMY", color: vizColors.pastelPurple },
+    { symbol: "square", text: "DMY", color: vizColors.brightGreen },
+    { symbol: "square", text: "DMY/YMD", color: vizColors.pastelPurple },
+    { symbol: "square", text: "YMD", color: vizColors.yellow },
+    { symbol: "square", text: "MDY/YMD", color: vizColors.adamantineBlue },
+    { symbol: "square", text: "DMY/MDY", color: vizColors.pink },
+    { symbol: "square", text: "MDY/YMD/DMY", color: vizColors.neonSeaFoam },
   ];
   return (
     <PageWrapper>
       <Header />
       <OutlinedWrapper>
         <HeaderH2> Date Format</HeaderH2>
-        <Subtitle>
-          {" "}
-          How countries around the world write today’s date. Month first? Day
-          first? Everyone has an opinion.And a second line of text to further
-          describe wtf is going on.
-        </Subtitle>
+        <Subtitle>{SummaryCopy({ type: "/dateformat" })}</Subtitle>
       </OutlinedWrapper>
       <OutlinedWrapper>
         <Legend legendData={DateFormatLegend} />
@@ -220,6 +216,7 @@ const DateFormat = () => {
       {/* <Table></Table> */}
 
       <PagePreview />
+      <Footer />
     </PageWrapper>
   );
 };

@@ -15,6 +15,9 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 12px auto;
+  @media screen and (max-width: calc(${maxWidth} + 64px)) {
+    padding: 0px 32px;
+  }
 `;
 
 export const HeaderH3 = styled.h2`
@@ -26,13 +29,17 @@ export const HeaderH3 = styled.h2`
 export const UnStyledLink = styled(Link)`
   text-decoration: none;
   &:focus,
-  &:hover,
   &:visited,
   &:link,
   &:active {
     text-decoration: none;
     color: inherit;¬
-  }
+  },
+    &:hover{
+    text-decoration: underline;
+    color: inherit;¬
+    }
+
 `;
 
 export const AboutBox = styled.div`

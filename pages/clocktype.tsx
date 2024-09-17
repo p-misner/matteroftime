@@ -8,11 +8,13 @@ import {
   TextParagraph,
 } from "../src/styling/infoPageStyle";
 import Header from "../src/components/Header";
+import Footer from "../src/components/Footer";
 import Map from "../src/components/Map";
 import PagePreview from "../src/components/PagePreview";
 import { vizColors } from "../src/styling/stylingConstants";
 import { LegendDataType } from "../src/styling/typeConstants";
 import { Legend } from "../src/components/Legend";
+import { SummaryCopy } from "../src/components/utils";
 
 const ClockType = () => {
   const ClockTypeLegend: LegendDataType[] = [
@@ -26,11 +28,7 @@ const ClockType = () => {
       <Header />
       <OutlinedWrapper>
         <HeaderH2> Clock Type</HeaderH2>
-        <Subtitle>
-          How countries around the world write today’s date. Month first? Day
-          first? Everyone has an opinion.And a second line of text to further
-          describe wtf is going on.
-        </Subtitle>
+        <Subtitle>{SummaryCopy({ type: "/clocktype" })}</Subtitle>
       </OutlinedWrapper>
       <OutlinedWrapper>
         <Legend legendData={ClockTypeLegend} />
@@ -51,6 +49,7 @@ const ClockType = () => {
         </TextParagraph>
       </OutlinedWrapper>
       <PagePreview />
+      <Footer />
     </PageWrapper>
   );
 };

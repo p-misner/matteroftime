@@ -6,11 +6,14 @@ import {
   Subtitle,
 } from "../src/styling/infoPageStyle";
 import Header from "../src/components/Header";
+import Footer from "../src/components/Footer";
+
 import Map from "../src/components/Map";
 import PagePreview from "../src/components/PagePreview";
 import { LegendDataType } from "../src/styling/typeConstants";
 import { vizColors } from "../src/styling/stylingConstants";
 import { Legend } from "../src/components/Legend";
+import { SummaryCopy } from "../src/components/utils";
 
 const DaylighSavings = () => {
   const DaylightSavingsLegend: LegendDataType[] = [
@@ -36,11 +39,7 @@ const DaylighSavings = () => {
       <Header />
       <OutlinedWrapper>
         <HeaderH2> Daylight Savings</HeaderH2>
-        <Subtitle>
-          How countries around the world write today’s date. Month first? Day
-          first? Everyone has an opinion.And a second line of text to further
-          describe wtf is going on.
-        </Subtitle>
+        <Subtitle>{SummaryCopy({ type: "/daylightsavings" })}</Subtitle>
       </OutlinedWrapper>
       <OutlinedWrapper>
         <Legend legendData={DaylightSavingsLegend} />
@@ -48,6 +47,7 @@ const DaylighSavings = () => {
       </OutlinedWrapper>
 
       <PagePreview />
+      <Footer />
     </PageWrapper>
   );
 };

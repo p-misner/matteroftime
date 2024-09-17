@@ -5,17 +5,20 @@ import {
   fontWeight,
   maxWidth,
   spacingBlocks,
+  fontFamily,
+  vizColors,
 } from "./stylingConstants";
+import { HEX } from "./typeConstants";
 
 export const HeaderH2 = styled.h2`
   font-size: ${fontSize.xlarge};
-  font-family: Outfit;
+  font-family: ${fontFamily.sanserif};
   color: ${fontColor};
   font-weight: ${fontWeight.semibold};
 `;
 export const HeaderH3 = styled.h3`
   font-size: ${fontSize.large};
-  font-family: Outfit;
+  font-family: ${fontFamily.sanserif};
   color: ${fontColor};
   font-weight: ${fontWeight.semibold};
 `;
@@ -49,7 +52,7 @@ export const Subtitle = styled.p`
   color: ${fontColor};
   font-family: Roboto Mono;
   font-size: ${fontSize.regular};
-  line-height: normal;
+  line-height: 1.6;
 `;
 
 export const TextParagraph = styled.p`
@@ -106,4 +109,39 @@ export const TableCell = styled.td`
 `;
 export const BracketsSpan = styled.span`
   opacity: 0.5;
+`;
+
+export const TooltipWrapper = styled.div`
+  display: inline-block;
+  position: relative;
+  cursor: auto;
+`;
+
+export const TooltipTip = styled.div`
+  position: absolute;
+  left: 0%;
+  top: 15%;
+  transform: translate(0%, -15%);
+  z-index: 100;
+  white-space: nowrap;
+  background: white;
+  border: 2px solid black;
+  font-weight: 700;
+  p {
+    margin: 0px 16px;
+  }
+`;
+
+type ColorDivInput = {
+  color?: HEX;
+};
+export const ColorDiv = styled.div`
+  background: ${(props) => (props.color ? props.color : "white")};
+  font-family: Outfit;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  border-top: 2px solid black;
+  cursor: pointer;
+  padding: 8px 16px;
 `;

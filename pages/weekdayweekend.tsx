@@ -10,31 +10,31 @@ import {
   TextParagraph,
 } from "../src/styling/infoPageStyle";
 import Header from "../src/components/Header";
+import Footer from "../src/components/Footer";
 import Map from "../src/components/Map";
 import PagePreview from "../src/components/PagePreview";
 import { LegendDataType } from "../src/styling/typeConstants";
 import { vizColors } from "../src/styling/stylingConstants";
 import { Legend } from "../src/components/Legend";
 import Image from "next/image";
+import { SummaryCopy } from "../src/components/utils";
 
 const WeekdayWeekend = () => {
   const WeekendWeekdayLegend: LegendDataType[] = [
     { symbol: "square", text: "M→F", color: vizColors.pastelPurple },
     { symbol: "square", text: "M→Sa", color: vizColors.adamantineBlue },
     { symbol: "square", text: "Su→Th", color: vizColors.brightGreen },
-    { symbol: "square", text: "Sa→Th", color: vizColors.pink },
-    // { symbol: "square", text: "Sa→W", color: vizColors.neonSeaFoam },
+    { symbol: "square", text: "Su→F", color: vizColors.pink },
+    { symbol: "square", text: "Sa→Th", color: vizColors.yellow },
+    { symbol: "square", text: "mixed", color: vizColors.neonSeaFoam },
+    { symbol: "square", text: "M→Th+Sa", color: "#000" },
   ];
   return (
     <PageWrapper>
       <Header />
       <OutlinedWrapper>
         <HeaderH2> Weekday vs Weekend</HeaderH2>
-        <Subtitle>
-          How countries around the world write today’s date. Month first? Day
-          first? Everyone has an opinion.And a second line of text to further
-          describe wtf is going on.
-        </Subtitle>
+        <Subtitle>{SummaryCopy({ type: "/weekdayweekend" })}</Subtitle>
       </OutlinedWrapper>
       <OutlinedWrapper>
         <Legend legendData={WeekendWeekdayLegend} />
@@ -82,6 +82,7 @@ const WeekdayWeekend = () => {
         </TextParagraph>
       </OutlinedWrapper>
       <PagePreview />
+      <Footer />
     </PageWrapper>
   );
 };

@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-handler-names */
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useCallback } from "react";
 import * as topojson from "topojson-client";
 import { CustomProjection, Graticule } from "@visx/geo";
 import { Projection } from "@visx/geo/lib/types";
 import { Zoom } from "@visx/zoom";
-import { geoPath, geoGraticule10 } from "d3-geo";
+import { geoPath } from "d3-geo";
 
 import { withTooltip, TooltipWithBounds } from "@visx/tooltip";
 import { WithTooltipProvidedProps } from "@visx/tooltip/lib/enhancers/withTooltip";
@@ -134,9 +134,11 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                 <rect x={0} y={0} width={width} height={height} fill="none" />
                 <path
                   id="sphere"
-                  d={geoPath(geoInterruptedMollweideHemispheres())({
-                    type: "Sphere",
-                  })}
+                  d={
+                    geoPath(geoInterruptedMollweideHemispheres())({
+                      type: "Sphere",
+                    })!
+                  }
                   fill="#F6F6FF"
                 />
                 <CustomProjection<FeatureShape>
@@ -212,9 +214,11 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                       ))}
                       <path
                         id="sphere"
-                        d={geoPath(geoInterruptedMollweideHemispheres())({
-                          type: "Sphere",
-                        })}
+                        d={
+                          geoPath(geoInterruptedMollweideHemispheres())({
+                            type: "Sphere",
+                          })!
+                        }
                         fill="none"
                         stroke="#AEAEFF"
                         strokeWidth={4}
@@ -227,9 +231,11 @@ export default withTooltip<GeoCustomProps, TooltipData>(
                   {/*Sphere outline and related clip path */}
                   <path
                     id="sphere"
-                    d={geoPath(geoInterruptedMollweideHemispheres())({
-                      type: "Sphere",
-                    })}
+                    d={
+                      geoPath(geoInterruptedMollweideHemispheres())({
+                        type: "Sphere",
+                      })!
+                    }
                   />
                   <clipPath id="clip">
                     <use href="#sphere" />

@@ -18,11 +18,10 @@ import {
 import TextTooltip from "./OverviewTextTooltips";
 import { dayNumberofWeek, defaultDateFormatter, isWeekend } from "./utils";
 
-function BoldedText({ text }: { text: string }) {
+function BoldedText({ text, link }: { text: string; link: string }) {
   return (
-    <TextTooltip delay={100} text={text}>
+    <TextTooltip link={link} delay={100} text={text}>
       <span suppressHydrationWarning={true} style={{ fontWeight: 700 }}>
-        {" "}
         {text}
       </span>
     </TextTooltip>
@@ -131,16 +130,23 @@ export default function OverviewText() {
             return option.value == country ? true : false;
           }}
           onChange={(e) => {
-            const cc = countryCodes.filter((x) => x.name == e.value)[0].code;
-            setTimezone(getTimezonesForCountry(cc)[0].name);
-            setCountry(e.value);
+            if (e) {
+              const cc = countryCodes.filter((x) => x.name == e.value)[0].code;
+              setTimezone(getTimezonesForCountry(cc)![0].name);
+
+              setCountry(e.value);
+            }
           }}
         />
-        , the date is <BoldedText text={formattedDate} />. Currently{" "}
-        <BoldedText text={timeToSecond} /> on {dayofWeek} in{" "}
-        <BoldedText text={timeZoneLong || "none detected"} />, it is the{" "}
-        <BoldedText text={dayNumber} /> day of the week and a{" "}
-        <BoldedText text={typeOfDay} />.
+        , the date is <BoldedText text={formattedDate} link={"/dateformat"} />.
+        Currently <BoldedText text={timeToSecond} link={"/clocktype"} /> on{" "}
+        {dayofWeek} in{" "}
+        <BoldedText
+          text={timeZoneLong || "none detected"}
+          link={"/daylightsavings"}
+        />
+        , it is the <BoldedText text={dayNumber} link={"/firstday"} /> day of
+        the week and a <BoldedText text={typeOfDay} link={"/weekdayweekend"} />.
       </BaseText>
 
       {allTimeZones && allTimeZones?.length > 1 && (

@@ -1,5 +1,4 @@
-import React from "react";
-import Link from "next/link";
+import React, { useState } from "react";
 
 import {
   HeaderH3,
@@ -9,21 +8,27 @@ import {
   Wrapper,
   UnStyledLink,
 } from "../styling/headerStyle";
+import { AboutPopUp } from "./AboutPopUp";
 
 export default function Header() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
-    <FullWidth>
-      <Wrapper>
-        {" "}
-        {/* Remove styling of underline*/}
-        <UnStyledLink href="/">
+    <div>
+      {modalOpen && <AboutPopUp setModalOpen={setModalOpen} />}
+      <FullWidth>
+        <Wrapper>
           {" "}
-          <HeaderH3>A Matter of Time</HeaderH3>
-        </UnStyledLink>
-        <AboutBox>
-          <Question>?</Question>
-        </AboutBox>
-      </Wrapper>
-    </FullWidth>
+          {/* Remove styling of underline*/}
+          <UnStyledLink href="/">
+            {" "}
+            <HeaderH3>A Matter of Time</HeaderH3>
+          </UnStyledLink>
+          <AboutBox onClick={() => setModalOpen(!modalOpen)}>
+            <Question>?</Question>
+          </AboutBox>
+        </Wrapper>
+      </FullWidth>
+    </div>
   );
 }
