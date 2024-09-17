@@ -1,11 +1,15 @@
 import React from "react";
-import { FullWidth, Wrapper } from "../styling/headerStyle";
+import { FullWidth, UnStyledLink, Wrapper } from "../styling/headerStyle";
 
-export default function Header() {
+export default function Footer() {
   return (
     <FullWidth>
       <Wrapper>
-        <p> Created by Priya Misner</p>
+        <p> Created by Priya Misner </p>
+        <UnStyledLink href="https://www.priyamisner.com">
+          {" "}
+          priyamisner.com
+        </UnStyledLink>
       </Wrapper>
     </FullWidth>
   );

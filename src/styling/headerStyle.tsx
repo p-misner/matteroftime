@@ -1,8 +1,8 @@
 /* eslint-disable import/prefer-default-export */
-import React from "react";
 import styled from "styled-components";
 
-import { h2, fontColor, maxWidth } from "./stylingConstants";
+import { fontSize, fontColor, maxWidth, fontFamily } from "./stylingConstants";
+import Link from "next/link";
 
 export const FullWidth = styled.div`
   border-bottom: 2px solid ${fontColor};
@@ -15,12 +15,31 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 12px auto;
+  @media screen and (max-width: calc(${maxWidth} + 64px)) {
+    padding: 0px 32px;
+  }
 `;
 
-export const HeaderH2 = styled.h2`
-  font-size: ${h2};
-  font-family: Outfit;
+export const HeaderH3 = styled.h2`
+  font-size: ${fontSize.large};
+  font-family: ${fontFamily.sanserif};
   color: ${fontColor};
+`;
+
+export const UnStyledLink = styled(Link)`
+  text-decoration: none;
+  &:focus,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+    color: inherit;¬
+  },
+    &:hover{
+    text-decoration: underline;
+    color: inherit;¬
+    }
+
 `;
 
 export const AboutBox = styled.div`
@@ -39,6 +58,6 @@ export const AboutBox = styled.div`
 `;
 
 export const Question = styled.p`
-  font-size: ${h2};
-  font-family: Outfit;
+  font-size: ${fontSize.large};
+  font-family: ${fontFamily.sanserif};
 `;

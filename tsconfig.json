@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,9 +14,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+    "incremental": true
   },
   "include": [
-    "src"
-  ]
+    "src",
+    "pages/index.tsx",
+    "pages/dateformat.tsx",
+    "pages/weekdayweekend.tsx",
+    "pages/firstday.tsx",
+    "pages/clocktype.tsx",
+    "pages/daylightsavings.tsx",
+    "index.d.ts"
+  ],
+  "exclude": ["node_modules"]
 }

@@ -1,24 +1,187 @@
-import React from "react";
-import { BaseText, HeroTextWrapper } from "../styling/descriptiveTextStyle";
+import React, { useState, useEffect } from "react";
+import {
+  getCountriesForTimezone,
+  getTimezonesForCountry,
+} from "countries-and-timezones";
+import { DateTime } from "luxon";
+import Select from "react-select";
+import { countryCodes } from "../data/dataConstants";
+import dateData from "../data/dateData.json";
 
-function CountryDropdown() {}
+import {
+  BaseText,
+  HeroTextWrapper,
+  NoteText,
+  TimezoneBlackButton,
+  TimezoneButton,
+} from "../styling/descriptiveTextStyle";
+import TextTooltip from "./OverviewTextTooltips";
+import { dayNumberofWeek, defaultDateFormatter, isWeekend } from "./utils";
 
-function Tooltip() {}
+function BoldedText({ text, link }: { text: string; link: string }) {
+  return (
+    <TextTooltip link={link} delay={100} text={text}>
+      <span suppressHydrationWarning={true} style={{ fontWeight: 700 }}>
+        {text}
+      </span>
+    </TextTooltip>
+  );
+}
 
-function BoldedText({ text }: { text: string }) {
-  return <span style={{ fontWeight: 700 }}> {text}</span>;
+function LuxonTime() {
+  const [time, setTime] = useState<DateTime>(DateTime.now());
+  useEffect(() => {
+    const timer = setInterval(() => setTime(DateTime.now()), 1000);
+    return function cleanup() {
+      clearInterval(timer);
+    };
+  }, []);
+  return time;
 }
 
 export default function OverviewText() {
+  const [timeZone, setTimezone] = useState<string>(
+    Intl.DateTimeFormat().resolvedOptions().timeZone
+  );
+
+  const [country, setCountry] = useState<string>(
+    getCountriesForTimezone(timeZone)[0]?.name
+  );
+
+  const [overflow, setOverflow] = useState<boolean>(true);
+
+  const countryCode = countryCodes.filter((x) => x.name == country)[0].code;
+  const countryDateDetails = dateData.filter(
+    (x) => x.CountryCode == countryCode
+  )[0];
+
+  const time = LuxonTime().setZone(timeZone);
+
+  const timeZoneLong = time
+    .toLocaleString({
+      day: "2-digit",
+      timeZoneName: "long",
+    })
+    .slice(4);
+
+  // maybe move this into separate function vs ternary
+  const timeToSecond = time.toLocaleString(
+    countryDateDetails.ClockTypeHour == "12hr"
+      ? {
+          hour: "numeric",
+          minute: "2-digit",
+          second: "numeric",
+        }
+      : {
+          hour: "numeric",
+          minute: "2-digit",
+          second: "numeric",
+          ...DateTime.TIME_24_WITH_SECONDS,
+        }
+  );
+
+  const dayofWeek = time.toLocaleString({ weekday: "long" });
+
+  // maybe move this into separate function vs ternary
+  const formattedDate = time.toFormat(
+    countryDateDetails.DateFormatDefault == "None Specified"
+      ? defaultDateFormatter(countryDateDetails.DateFormat)
+      : countryDateDetails.DateFormatDefault
+  );
+
+  const typeOfDay = isWeekend({
+    dayofWeek: dayofWeek,
+    WorkWeek: countryDateDetails.WorkWeek,
+  })
+    ? "weekend"
+    : "weekday";
+
+  const dayNumber = dayNumberofWeek({
+    dayofWeek: dayofWeek,
+    firstDay: countryDateDetails.FirstDayofWeek,
+  });
+
+  const allTimeZones = getTimezonesForCountry(countryCode)?.map((x) => x.name);
+
+  const listOptions = countryCodes.map((x) => ({
+    value: x.name,
+    label: x.code == "US" ? "USA" : x.name,
+  }));
   return (
     <HeroTextWrapper>
       <BaseText>
-        In United States the date is currently <BoldedText text="01/03/2023" />.
-        It is <BoldedText text="5:47:32am" /> in the{" "}
-        <BoldedText text="Eastern Time Zone" /> and a Monday, the{" "}
-        <BoldedText text="first" /> day of the week and a{" "}
-        <BoldedText text="weekday" />.
+        In{" "}
+        <Select
+          styles={{
+            container: (baseStyles, state) => ({
+              ...baseStyles,
+              borderColor: state.isFocused ? "blue" : "gray",
+              fontSize: "24px",
+              lineHeight: "32px",
+              display: "inline-block",
+              margin: "0 0.25em",
+              width: "400px",
+            }),
+          }}
+          options={listOptions}
+          value={listOptions.find((option) => option.value === country)}
+          isOptionSelected={(option) => {
+            console.log(option.value == country);
+            return option.value == country ? true : false;
+          }}
+          onChange={(e) => {
+            if (e) {
+              const cc = countryCodes.filter((x) => x.name == e.value)[0].code;
+              setTimezone(getTimezonesForCountry(cc)![0].name);
+
+              setCountry(e.value);
+            }
+          }}
+        />
+        , the date is <BoldedText text={formattedDate} link={"/dateformat"} />.
+        Currently <BoldedText text={timeToSecond} link={"/clocktype"} /> on{" "}
+        {dayofWeek} in{" "}
+        <BoldedText
+          text={timeZoneLong || "none detected"}
+          link={"/daylightsavings"}
+        />
+        , it is the <BoldedText text={dayNumber} link={"/firstday"} /> day of
+        the week and a <BoldedText text={typeOfDay} link={"/weekdayweekend"} />.
       </BaseText>
+
+      {allTimeZones && allTimeZones?.length > 1 && (
+        <NoteText>
+          Note: Information being displayed is for the{" "}
+          <span>&quot;{timeZone}&quot;</span> region. Other regions include{" "}
+          {allTimeZones
+            ?.filter((x) => x !== timeZone)
+            .filter((x, i) => (overflow ? i < 5 : i >= 0))
+            .map((x) => (
+              <TimezoneButton
+                type="button"
+                onClick={() => setTimezone(x)}
+                key={x}
+              >
+                {x}{" "}
+              </TimezoneButton>
+            ))}
+          {overflow && allTimeZones && allTimeZones.length > 5 ? (
+            <TimezoneBlackButton
+              type="button"
+              onClick={() => setOverflow(false)}
+            >
+              Show More
+            </TimezoneBlackButton>
+          ) : allTimeZones.length <= 5 ? null : (
+            <TimezoneBlackButton
+              type="button"
+              onClick={() => setOverflow(true)}
+            >
+              Show Less
+            </TimezoneBlackButton>
+          )}
+        </NoteText>
+      )}
     </HeroTextWrapper>
   );
 }
