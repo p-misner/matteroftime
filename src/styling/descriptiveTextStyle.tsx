@@ -6,6 +6,7 @@ import {
   fontSize,
   fontWeight,
   maxWidth,
+  mobileBreakpoint,
   vizColors,
 } from "./stylingConstants";
 
@@ -14,6 +15,10 @@ export const BaseText = styled.div`
   font-size: ${fontSize.xlarge};
   font-weight: 400;
   line-height: 80px;
+  @media screen and (max-width: ${mobileBreakpoint}) {
+    font-size: ${fontSize.large};
+    line-height: 60px;
+  }
 `;
 
 export const HeroTextWrapper = styled.div`
@@ -30,6 +35,7 @@ export const NoteText = styled.p`
   span {
     font-weight: ${fontWeight.semibold};
   }
+  margin-bottom: 16px;
 `;
 
 export const TimezoneButton = styled.button`

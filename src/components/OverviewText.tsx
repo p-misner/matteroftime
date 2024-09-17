@@ -17,6 +17,7 @@ import {
 } from "../styling/descriptiveTextStyle";
 import TextTooltip from "./OverviewTextTooltips";
 import { dayNumberofWeek, defaultDateFormatter, isWeekend } from "./utils";
+import { mobileBreakpoint } from "../styling/stylingConstants";
 
 function BoldedText({ text, link }: { text: string; link: string }) {
   return (
@@ -121,6 +122,10 @@ export default function OverviewText() {
               display: "inline-block",
               margin: "0 0.25em",
               width: "400px",
+              "@media only screen and (max-width: 580px)": {
+                width: "300px",
+                fontSize: "20px",
+              },
             }),
           }}
           options={listOptions}
@@ -148,6 +153,13 @@ export default function OverviewText() {
         , it is the <BoldedText text={dayNumber} link={"/firstday"} /> day of
         the week and a <BoldedText text={typeOfDay} link={"/weekdayweekend"} />.
       </BaseText>
+
+      {countryDateDetails.DateFormatDefault.includes("None") && (
+        <NoteText>
+          * date format not specifically stated, defaults to international
+          standard
+        </NoteText>
+      )}
 
       {allTimeZones && allTimeZones?.length > 1 && (
         <NoteText>
@@ -180,13 +192,6 @@ export default function OverviewText() {
               Show Less
             </TimezoneBlackButton>
           )}
-        </NoteText>
-      )}
-
-      {countryDateDetails.DateFormatDefault.includes("None") && (
-        <NoteText>
-          * date format not specifically stated, defaults to international
-          standard
         </NoteText>
       )}
     </HeroTextWrapper>
