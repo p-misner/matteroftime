@@ -85,21 +85,21 @@ export default function OverviewText() {
 
   // maybe move this into separate function vs ternary
   const formattedDate = time.toFormat(
-    countryDateDetails.DateFormatDefault == "None Specified"
-      ? defaultDateFormatter(countryDateDetails.DateFormat)
-      : countryDateDetails.DateFormatDefault
+    countryDateDetails?.DateFormatDefault == "None Specified"
+      ? defaultDateFormatter(countryDateDetails?.DateFormat)
+      : countryDateDetails?.DateFormatDefault
   );
 
   const typeOfDay = isWeekend({
     dayofWeek: dayofWeek,
-    WorkWeek: countryDateDetails.WorkWeek,
+    WorkWeek: countryDateDetails?.WorkWeek,
   })
     ? "weekend"
     : "weekday";
 
   const dayNumber = dayNumberofWeek({
     dayofWeek: dayofWeek,
-    firstDay: countryDateDetails.FirstDayofWeek,
+    firstDay: countryDateDetails?.FirstDayofWeek,
   });
 
   const allTimeZones = getTimezonesForCountry(countryCode)?.map((x) => x.name);
@@ -154,7 +154,7 @@ export default function OverviewText() {
         the week and a <BoldedText text={typeOfDay} link={"/weekdayweekend"} />.
       </BaseText>
 
-      {countryDateDetails.DateFormatDefault.includes("None") && (
+      {countryDateDetails?.DateFormatDefault.includes("None") && (
         <NoteText>
           * date format not specifically stated, defaults to international
           standard
