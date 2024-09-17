@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useState, useEffect } from "react";
 import {
   getCountriesForTimezone,
@@ -111,7 +110,7 @@ export default function OverviewText() {
   }));
   return (
     <HeroTextWrapper>
-      <BaseText>
+      {/* <BaseText>
         In{" "}
         <Select
           styles={{
@@ -153,7 +152,7 @@ export default function OverviewText() {
         />
         , it is the <BoldedText text={dayNumber} link={"/firstday"} /> day of
         the week and a <BoldedText text={typeOfDay} link={"/weekdayweekend"} />.
-      </BaseText>
+      </BaseText> */}
 
       {countryDateDetails?.DateFormatDefault.includes("None") && (
         <NoteText>
