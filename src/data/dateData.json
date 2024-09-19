@@ -1497,7 +1497,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "24hr12oral",
     "NumberTimezones": "",
-    "DaylightSavings": "past"
+    "DaylightSavings": "never"
   },
   {
     "FullName": "Ireland",
@@ -2337,7 +2337,7 @@
     "LengthofWeekend": "",
     "ClockTypeHour": "Both",
     "NumberTimezones": "",
-    "DaylightSavings": "never"
+    "DaylightSavings": "past"
   },
   {
     "FullName": "Malaysia",
