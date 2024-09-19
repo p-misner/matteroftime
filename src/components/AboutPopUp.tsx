@@ -20,9 +20,9 @@ export function AboutPopUp({ setModalOpen }: { setModalOpen: any }) {
             not the standard in India. After getting over the embarassment, I
             fell down a pretty deep Wikipedia rabbit hole about all things time
             related and the more I discovered the worldwide differences in how
-            we represented, the more fascinated I became. This page, and the
-            maps illustrating how the world approaches time, is a culmination of
-            my interest 😊
+            we represent date and time, the more fascinated I became. This page,
+            and the maps illustrating how the world approaches time, is a
+            culmination of my interest 😊
           </p>
           <h1>Data Sources</h1>
           <p>
