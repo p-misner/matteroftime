@@ -43,9 +43,9 @@ const FirstDay = () => {
           a while, different cultures had varying lengths of time that made up a
           week. The ancient egyptians had a ten day week while while the
           Etruscans followed an eight day work week that was initally adopted by
-          the Romans. In 321 CE, Emperor [NAME] decreed that the Roman empire
-          would be following the seven day week and slowly this standard was
-          adopted around the world.
+          the Romans. In 321 CE, the emperor decreed that the Roman empire would
+          be following the seven day week and slowly this standard was adopted
+          around the world.
         </TextParagraph>
         <TextParagraph>
           The seven day week has no basis in any astronomical event and for a
@@ -55,13 +55,11 @@ const FirstDay = () => {
           the Romans. It is theorized that the Babylonians based their week on
           the seven celestial bodies (Sun, Moon, Mercury, Venus, Mars, Jupiter
           and Saturn) and neighboring territories began to adopt the unit as
-          well. In 321 CE, Emperor [NAME] decreed that the Roman empire would be
-          following the seven day week, acclerating the adoption of the this
-          standard around the world.
+          well.
         </TextParagraph>
         <HeaderH3> Beginning of the Week</HeaderH3>
         <TextParagraph>
-          While all modern day cultures agree on the lenght of a week, the
+          While all modern day cultures agree on the length of a week, the
           starting day has some variation around the world.
         </TextParagraph>
         <EndianWrapper>
