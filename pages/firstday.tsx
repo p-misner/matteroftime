@@ -37,25 +37,16 @@ const FirstDay = () => {
       </OutlinedWrapper>
       <OutlinedWrapper>
         <HeaderH3> Origin of the 7 Day Week</HeaderH3>
+
         <TextParagraph>
-          {" "}
-          The seven day week has no basis in any astronomical phenomenon and for
-          a while, different cultures had varying lengths of time that made up a
-          week. The ancient egyptians had a ten day week while while the
-          Etruscans followed an eight day work week that was initally adopted by
-          the Romans. In 321 CE, the emperor decreed that the Roman empire would
-          be following the seven day week and slowly this standard was adopted
-          around the world.
-        </TextParagraph>
-        <TextParagraph>
-          The seven day week has no basis in any astronomical event and for a
+          The seven-day week has no basis in any astronomical event, and for a
           while, different cultures had varying lengths of time that made up a
-          week. The ancient egyptians had a ten day week while while the
-          Etruscans followed an eight day work week that was initally adopted by
-          the Romans. It is theorized that the Babylonians based their week on
-          the seven celestial bodies (Sun, Moon, Mercury, Venus, Mars, Jupiter
-          and Saturn) and neighboring territories began to adopt the unit as
-          well.
+          week. The ancient Egyptians had a ten-day week, while the Etruscans
+          followed an eight-day workweek that was initially adopted by the
+          Romans. It is theorized that the Babylonians based their week on the
+          seven celestial bodies (Sun, Moon, Mercury, Venus, Mars, Jupiter, and
+          Saturn), and neighboring territories began to adopt the seven-day week
+          as well.
         </TextParagraph>
         <HeaderH3> Beginning of the Week</HeaderH3>
         <TextParagraph>
@@ -78,11 +69,11 @@ const FirstDay = () => {
         </EndianWrapper>
         <TextParagraph>
           Many countries with Catholic/Protestant origins begin their week on
-          Sunday, influenced in part by the Sabath being on Sunday. Influenced
+          Sunday, influenced in part by the Sabbath being on Sunday. Influenced
           by Islamic traditions, the first day of the week is Saturday in many
-          Middle Eastern and North African countries while the majority of
+          Middle Eastern and North African countries, while the majority of
           Europe begins their week on a Monday. The International Organization
-          for Standardization (ISO) counts Monday as the first day of their week
+          for Standardization (ISO) counts Monday as the first day of the week
           for recordkeeping.
         </TextParagraph>
       </OutlinedWrapper>

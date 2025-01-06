@@ -38,13 +38,13 @@ const ClockType = () => {
         <HeaderH3> 24 Hour vs 12 Hour Time</HeaderH3>
         <TextParagraph>
           {" "}
-          Ofter referred to as military time, the 24 hour clock runs from
-          midnight to midnight. This is the most common way to notate time
-          around the globe. THe other system used is 12 hour time, running from
-          midnight to noon before repeating from noon to midnight with the
-          numbers 1 through 12 used twice each day. Even in countries that
-          default to the 12 hour clock, like the United States, certain
-          industries use the 24 hour clock to tell time to prevent
+          Often referred to as military time, the 24-hour clock runs from
+          midnight to midnight. This is the most common way to represent time
+          around the globe. The other system used is 12-hour time, running from
+          midnight to noon before repeating from noon to midnight, with the
+          numbers 1 through 12 are used twice each day. Even in countries that
+          default to the 12-hour clock, like the United States, certain
+          industries use the 24-hour clock to tell time to prevent
           misunderstandings when communicating.
         </TextParagraph>
       </OutlinedWrapper>

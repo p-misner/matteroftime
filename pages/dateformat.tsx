@@ -51,7 +51,7 @@ const DateFormat = () => {
           The order in which the day, month and year for a date is written is
           known as it&apos;s &#39;endianess&#39;. Generally dates are written
           from either smallest magnitude to biggest magnitude or vice versa. The
-          United States takes a different tact and is the primary country to use
+          United States takes a different tack and is the primary country to use
           Middle Endian for most date formatting.{" "}
         </TextParagraph>
         <EndianWrapper>
@@ -68,11 +68,11 @@ const DateFormat = () => {
         <HeaderH3>Formatting</HeaderH3>
         <TextParagraph>
           While order is a key part of writing dates, there are also variations
-          in the way countries write out the days, months and years in a date.
-          For example, January can be written as “1”, “01” or “Jan” depending on
-          the country convention. By pairing the endianness with the different
-          forms of day, month and year, you can write the same date in many
-          different ways.{" "}
+          in the way countries write out the days, months, and years in a date.
+          For example, January can be written as “1,” “01,” or “Jan,” depending
+          on the country convention. By pairing the endianness with the
+          different forms of day, month, and year, you can write the same date
+          in many different ways.{" "}
         </TextParagraph>
         <TextParagraph>
           Exact formats are defined and communicated using the shorthand below:
